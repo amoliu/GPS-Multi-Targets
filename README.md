@@ -6,3 +6,34 @@ This code is a reimplementation of the guided policy search algorithm and LQG-ba
 For full documentation, see [rll.berkeley.edu/gps](http://rll.berkeley.edu/gps).
 
 The code base is **a work in progress**. See the [FAQ](http://rll.berkeley.edu/gps/faq.html) for information on planned future additions to the code.
+
+---
+---
+This branch modified several files based on the original code to support training with **target pose** as part of neural network **input**. 
+It's the **second** version to support for multi-targets.Compared to the [master](https://github.com/CTTC/GPS-Multi-Targets) version, it added one more term in protobuf file (`END_EFFECTOR_POINT_TARGET_POSITION`) and changes less amount of code in the original code from Berkeley. 
+
+`hyperparams.py` is the main file being modified. 
+
+It's **more recommendend** compared to the **master** version which modifies quite a lot of the original code.
+
+To run this program (Require **TensorFlow**):
+
+**BADMM**
+```
+python python/gps/gps_main.py box2d_pointmass_badmm_multitargets_tf
+```
+**MDGPS**
+```
+python python/gps/gps_main.py box2d_pointmass_mdgps_multitargets_tf
+```
+
+**PIGPS**
+```
+python python/gps/gps_main.py box2d_pointmass_pigps_multitargets_tf
+```
+
+
+To test the generalization ability of the neural network, run:
+```
+python python/gps/gps_main.py box2d_pointmass_badmm_multitargets_tf -p 1
+```
