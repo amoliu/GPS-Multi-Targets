@@ -22,7 +22,7 @@ from gps.sample.sample_list import SampleList
 
 class GPSMain(object):
     """ Main class to run algorithms and experiments. """
-    def __init__(self, config, quit_on_end=False):
+    def __init__(self, config, quit_on_end=False, resume=False, test=False):
         """
         Initialize GPSMain
         Args:
@@ -31,11 +31,17 @@ class GPSMain(object):
         """
         self._quit_on_end = quit_on_end
         self._hyperparams = config
-        self._conditions = config['common']['conditions']
+
         if 'train_conditions' in config['common']:
-            self._train_idx = config['common']['train_conditions']
-            self._test_idx = config['common']['test_conditions']
+            self._conditions = config['common']['train_conditions']
+            self._train_idx = range(config['common']['train_conditions'])
+            self._test_idx = range(config['common']['test_conditions'])
+            if not test:
+                config['common']['conditions'] = config['common']['train_conditions']
+            else:
+                config['common']['conditions'] = config['common']['test_conditions']
         else:
+            self._conditions = config['common']['conditions']
             self._train_idx = range(self._conditions)
             config['common']['train_conditions'] = config['common']['conditions']
             self._hyperparams=config
@@ -48,7 +54,8 @@ class GPSMain(object):
         self.gui = GPSTrainingGUI(config['common']) if config['gui_on'] else None
 
         config['algorithm']['agent'] = self.agent
-        self.algorithm = config['algorithm']['type'](config['algorithm'])
+        if not resume:
+            self.algorithm = config['algorithm']['type'](config['algorithm'])
 
     def run(self, itr_load=None):
         """
@@ -109,6 +116,8 @@ class GPSMain(object):
             self.gui.set_status_text(('Took %d policy sample(s) from ' +
                 'algorithm state at iteration %d.\n' +
                 'Saved to: data_files/pol_sample_itr_%02d.pkl.\n') % (N, itr, itr))
+
+        self._end()
 
     def _initialize(self, itr_load):
         """
@@ -371,7 +380,7 @@ def main():
         current_algorithm = sorted(algorithm_filenames, reverse=True)[0]
         current_itr = int(current_algorithm[len(algorithm_prefix):len(algorithm_prefix)+2])
 
-        gps = GPSMain(hyperparams.config)
+        gps = GPSMain(hyperparams.config, resume=True, test=True)
         if hyperparams.config['gui_on']:
             test_policy = threading.Thread(
                 target=lambda: gps.test_policy(itr=current_itr, N=test_policy_N)
@@ -392,7 +401,10 @@ def main():
         random.seed(seed)
         np.random.seed(seed)
 
-        gps = GPSMain(hyperparams.config, args.quit)
+        if resume_training_itr is None:
+            gps = GPSMain(hyperparams.config, args.quit, resume=False)
+        else:
+            gps = GPSMain(hyperparams.config, args.quit, resume=True)
         if hyperparams.config['gui_on']:
             run_gps = threading.Thread(
                 target=lambda: gps.run(itr_load=resume_training_itr)
@@ -404,6 +416,7 @@ def main():
             plt.show()
         else:
             gps.run(itr_load=resume_training_itr)
+        # gps.run(itr_load=resume_training_itr)
 
 
 if __name__ == "__main__":

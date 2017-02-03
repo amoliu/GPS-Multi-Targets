@@ -8,7 +8,7 @@ from gps.algorithm.policy.lin_gauss_policy import LinearGaussianPolicy
 from gps.algorithm.policy.config import INIT_LG_PD, INIT_LG_LQR
 
 
-def init_lqr(hyperparams):
+def init_lqr(hyperparams, cond=0):
     """
     Return initial gains for a time-varying linear Gaussian controller
     that tries to hold the initial position.
@@ -16,7 +16,7 @@ def init_lqr(hyperparams):
     config = copy.deepcopy(INIT_LG_LQR)
     config.update(hyperparams)
 
-    x0, dX, dU = config['x0'], config['dX'], config['dU']
+    x0, dX, dU = config['x0'][cond], config['dX'], config['dU']
     dt, T = config['dt'], config['T']
 
     #TODO: Use packing instead of assuming which indices are the joint
@@ -105,7 +105,7 @@ def init_lqr(hyperparams):
 
 
 #TODO: Fix docstring
-def init_pd(hyperparams):
+def init_pd(hyperparams, cond=0):
     """
     This function initializes the linear-Gaussian controller as a
     proportional-derivative (PD) controller with Gaussian noise. The
@@ -134,7 +134,7 @@ def init_pd(hyperparams):
                 np.zeros((dU, dX - dU*2))
             ]), [T, 1, 1]
         )
-    k = np.tile(-K[0, :, :].dot(x0), [T, 1])
+    k = np.tile(-K[0, :, :].dot(x0[cond]), [T, 1])
     PSig = config['init_var'] * np.tile(np.eye(dU), [T, 1, 1])
     cholPSig = np.sqrt(config['init_var']) * np.tile(np.eye(dU), [T, 1, 1])
     invPSig = (1.0 / config['init_var']) * np.tile(np.eye(dU), [T, 1, 1])

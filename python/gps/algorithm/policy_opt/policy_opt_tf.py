@@ -44,12 +44,16 @@ class PolicyOptTf(PolicyOpt):
         self.action_tensor = None  # mu true
         self.solver = None
         self.feat_vals = None
+        self.is_training = tf.placeholder(tf.bool, name='is_training')
         self.init_network()
         self.init_solver()
         self.var = self._hyperparams['init_var'] * np.ones(dU)
-        self.sess = tf.Session()
+        tf_config = tf.ConfigProto()
+        tf_config.gpu_options.allow_growth = True
+        self.sess = tf.Session(config=tf_config)
         self.policy = TfPolicy(dU, self.obs_tensor, self.act_op, self.feat_op,
-                               np.zeros(dU), self.sess, self.device_string, copy_param_scope=self._hyperparams['copy_param_scope'])
+                               np.zeros(dU), self.sess, self.device_string, self.is_training,
+                               copy_param_scope=self._hyperparams['copy_param_scope'])
         # List of indices for state (vector) data and image (tensor) data in observation.
         self.x_idx, self.img_idx, i = [], [], 0
         if 'obs_image_data' not in self._hyperparams['network_params']:
@@ -61,14 +65,26 @@ class PolicyOptTf(PolicyOpt):
             else:
                 self.x_idx = self.x_idx + list(range(i, i+dim))
             i += dim
-        init_op = tf.initialize_all_variables()
+
+        self.train_dir = os.path.join(os.path.dirname(self._hyperparams['weights_file_prefix']),
+                                      'tf_train')
+        self.checkpoint_name = 'model.ckpt'
+        if not os.path.exists(self.train_dir):
+            os.makedirs(self.train_dir)
+        self.train_writer = tf.summary.FileWriter(self.train_dir,
+                                                  graph=self.sess.graph)
+        init_op = tf.global_variables_initializer()
         self.sess.run(init_op)
 
     def init_network(self):
         """ Helper method to initialize the tf networks used """
         tf_map_generator = self._hyperparams['network_model']
-        tf_map, fc_vars, last_conv_vars = tf_map_generator(dim_input=self._dO, dim_output=self._dU, batch_size=self.batch_size,
-                                  network_config=self._hyperparams['network_params'])
+        tf_map, fc_vars, last_conv_vars = tf_map_generator(is_training=self.is_training,
+                                                           dim_input=self._dO,
+                                                           dim_output=self._dU,
+                                                           batch_size=self.batch_size,
+                                                           network_config=self._hyperparams['network_params'],
+                                                           weight_decay=self._hyperparams['weight_decay'])
         self.obs_tensor = tf_map.get_input_tensor()
         self.precision_tensor = tf_map.get_precision_tensor()
         self.action_tensor = tf_map.get_target_output_tensor()
@@ -79,20 +95,32 @@ class PolicyOptTf(PolicyOpt):
         self.last_conv_vars = last_conv_vars
 
         # Setup the gradients
-        self.grads = [tf.gradients(self.act_op[:,u], self.obs_tensor)[0]
-                for u in range(self._dU)]
+        # self.grads = [tf.gradients(self.act_op[:,u], self.obs_tensor)[0]
+        #         for u in range(self._dU)]
 
     def init_solver(self):
         """ Helper method to initialize the solver. """
-        self.solver = TfSolver(loss_scalar=self.loss_scalar,
-                               solver_name=self._hyperparams['solver_type'],
-                               base_lr=self._hyperparams['lr'],
-                               lr_policy=self._hyperparams['lr_policy'],
-                               momentum=self._hyperparams['momentum'],
-                               weight_decay=self._hyperparams['weight_decay'],
-                               fc_vars=self.fc_vars,
-                               last_conv_vars=self.last_conv_vars)
-        self.saver = tf.train.Saver()
+        if self._hyperparams['lr_policy'] == 'fixed':
+            self.solver = TfSolver(loss_scalar=self.loss_scalar,
+                                   solver_name=self._hyperparams['solver_type'],
+                                   base_lr=self._hyperparams['lr'],
+                                   lr_policy=self._hyperparams['lr_policy'],
+                                   momentum=self._hyperparams['momentum'],
+                                   fc_vars=self.fc_vars,
+                                   last_conv_vars=self.last_conv_vars)
+        elif self._hyperparams['lr_policy'] == 'exp':
+            self.solver = TfSolver(loss_scalar=self.loss_scalar,
+                                   solver_name=self._hyperparams['solver_type'],
+                                   base_lr=self._hyperparams['lr'],
+                                   lr_policy=self._hyperparams['lr_policy'],
+                                   momentum=self._hyperparams['momentum'],
+                                   fc_vars=self.fc_vars,
+                                   last_conv_vars=self.last_conv_vars,
+                                   decay_rate=self._hyperparams['decay_rate'],
+                                   decay_steps=self._hyperparams['decay_steps'])
+        else:
+            raise NotImplementedError('learning rate policies other than fixed and exp are not implemented')
+        self.saver = tf.train.Saver(max_to_keep=0)
 
     def update(self, obs, tgt_mu, tgt_prc, tgt_wt):
         """
@@ -159,10 +187,15 @@ class PolicyOptTf(PolicyOpt):
                 start_idx = int(i * self.batch_size %
                                 (batches_per_epoch * self.batch_size))
                 idx_i = idx[start_idx:start_idx+self.batch_size]
-                feed_dict = {self.last_conv_vars: conv_values[idx_i],
+                feed_dict = {self.is_training: True,
+                             self.last_conv_vars: conv_values[idx_i],
                              self.action_tensor: tgt_mu[idx_i],
                              self.precision_tensor: tgt_prc[idx_i]}
-                train_loss = self.solver(feed_dict, self.sess, device_string=self.device_string, use_fc_solver=True)
+                train_loss = self.solver(feed_dict,
+                                         global_step=self.tf_iter,
+                                         sess=self.sess,
+                                         device_string=self.device_string,
+                                         use_fc_solver=True)
                 average_loss += train_loss
 
                 if (i+1) % 500 == 0:
@@ -177,10 +210,14 @@ class PolicyOptTf(PolicyOpt):
             start_idx = int(i * self.batch_size %
                             (batches_per_epoch * self.batch_size))
             idx_i = idx[start_idx:start_idx+self.batch_size]
-            feed_dict = {self.obs_tensor: obs[idx_i],
+            feed_dict = {self.is_training: True,
+                         self.obs_tensor: obs[idx_i],
                          self.action_tensor: tgt_mu[idx_i],
                          self.precision_tensor: tgt_prc[idx_i]}
-            train_loss = self.solver(feed_dict, self.sess, device_string=self.device_string)
+            train_loss = self.solver(feed_dict,
+                                     global_step=self.tf_iter,
+                                     sess=self.sess,
+                                     device_string=self.device_string)
 
             average_loss += train_loss
             if (i+1) % 50 == 0:
@@ -194,6 +231,9 @@ class PolicyOptTf(PolicyOpt):
             self.feat_vals = self.solver.get_var_values(self.sess, self.feat_op, feed_dict, num_values, self.batch_size)
         # Keep track of tensorflow iterations for loading solver states.
         self.tf_iter += self._hyperparams['iterations']
+
+        if self.tf_iter % 50000 == 0:
+            self.save_model()
 
         # Optimize variance.
         A = np.sum(tgt_prc_orig, 0) + 2 * N * T * \
@@ -227,7 +267,8 @@ class PolicyOptTf(PolicyOpt):
         for i in range(N):
             for t in range(T):
                 # Feed in data.
-                feed_dict = {self.obs_tensor: np.expand_dims(obs[i, t], axis=0)}
+                feed_dict = {self.is_training: False,
+                             self.obs_tensor: np.expand_dims(obs[i, t], axis=0)}
                 with tf.device(self.device_string):
                     output[i, t, :] = self.sess.run(self.act_op, feed_dict=feed_dict)
 
@@ -241,21 +282,19 @@ class PolicyOptTf(PolicyOpt):
         """ Set the entropy regularization. """
         self._hyperparams['ent_reg'] = ent_reg
 
-    def save_model(self, fname):
+    def save_model(self):
+        fname = os.path.join(self.train_dir, self.checkpoint_name)
         LOGGER.debug('Saving model to: %s', fname)
-        self.saver.save(self.sess, fname, write_meta_graph=False)
+        self.saver.save(self.sess, fname, global_step=self.tf_iter)
 
-    def restore_model(self, fname):
-        self.saver.restore(self.sess, fname)
-        LOGGER.debug('Restoring model from: %s', fname)
+    def restore_model(self, model_checkpoint_path):
+        # Restores from checkpoint
+        self.saver.restore(self.sess, model_checkpoint_path)
+        LOGGER.debug('Restoring model from: %s', model_checkpoint_path)
 
     # For pickling.
     def __getstate__(self):
-        with tempfile.NamedTemporaryFile('w+b', delete=True) as f:
-            self.save_model(f.name) # TODO - is this implemented.
-            f.seek(0)
-            with open(f.name, 'r') as f2:
-                wts = f2.read()
+        self.save_model()
         return {
             'hyperparams': self._hyperparams,
             'dO': self._dO,
@@ -264,8 +303,7 @@ class PolicyOptTf(PolicyOpt):
             'bias': self.policy.bias,
             'tf_iter': self.tf_iter,
             'x_idx': self.policy.x_idx,
-            'chol_pol_covar': self.policy.chol_pol_covar,
-            'wts': wts,
+            'chol_pol_covar': self.policy.chol_pol_covar
         }
 
     # For unpickling.
@@ -278,9 +316,5 @@ class PolicyOptTf(PolicyOpt):
         self.policy.x_idx = state['x_idx']
         self.policy.chol_pol_covar = state['chol_pol_covar']
         self.tf_iter = state['tf_iter']
-
-        with tempfile.NamedTemporaryFile('w+b', delete=True) as f:
-            f.write(state['wts'])
-            f.seek(0)
-            self.restore_model(f.name)
+        self.restore_model(os.path.join(self.train_dir, self.checkpoint_name+'-'+str(self.tf_iter)))
 

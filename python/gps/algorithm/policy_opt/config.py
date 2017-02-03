@@ -12,12 +12,12 @@ GENERIC_CONFIG = {
     'init_var': 0.1,  # Initial policy variance.
     'ent_reg': 0.0,  # Entropy regularizer.
     # Solver hyperparameters.
-    'iterations': 5000,  # Number of iterations per inner iteration.
-    'batch_size': 25,
+    'iterations': 10000,  # Number of iterations per inner iteration.
+    'batch_size': 32,
     'lr': 0.001,  # Base learning rate (by default it's fixed).
-    'lr_policy': 'fixed',  # Learning rate policy.
+    'lr_policy': 'exp',  #'fixed' or 'exp' , Learning rate policy.
     'momentum': 0.9,  # Momentum.
-    'weight_decay': 0.005,  # Weight decay.
+    'weight_decay': 0.005, # Weight decay.
     'solver_type': 'Adam',  # Solver type (e.g. 'SGD', 'Adam', etc.).
     # set gpu usage.
     'use_gpu': 1,  # Whether or not to use the GPU for caffe training.
@@ -43,5 +43,8 @@ POLICY_OPT_TF = {
     'copy_param_scope': 'conv_params',
     'fc_only_iterations': 0,
 }
+if GENERIC_CONFIG['lr_policy'] == 'exp':
+    POLICY_OPT_TF['decay_rate'] = 0.96
+    POLICY_OPT_TF['decay_steps'] = 50000
 
 POLICY_OPT_TF.update(GENERIC_CONFIG)

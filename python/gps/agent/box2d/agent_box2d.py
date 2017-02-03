@@ -30,7 +30,7 @@ class AgentBox2D(Agent):
         condition.
         """
         conds = self._hyperparams['conditions']
-        for field in ('x0', 'x0var', 'pos_body_idx', 'pos_body_offset',
+        for field in ('x0var', 'pos_body_idx', 'pos_body_offset',
                       'noisy_body_idx', 'noisy_body_var'):
             self._hyperparams[field] = setup(self._hyperparams[field], conds)
 
@@ -39,7 +39,7 @@ class AgentBox2D(Agent):
         Helper method for handling setup of the Box2D world.
         """
         self.x0 = self._hyperparams["x0"]
-        self._worlds = [world(self.x0[i], target, render)
+        self._worlds = [world(self.x0[i], target[i], render)
                         for i in range(self._hyperparams['conditions'])]
 
 

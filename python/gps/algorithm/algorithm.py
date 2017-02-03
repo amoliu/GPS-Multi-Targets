@@ -61,7 +61,7 @@ class Algorithm(object):
             init_traj_distr = extract_condition(
                 self._hyperparams['init_traj_distr'], self._cond_idx[m]
             )
-            self.cur[m].traj_distr = init_traj_distr['type'](init_traj_distr)
+            self.cur[m].traj_distr = init_traj_distr['type'](init_traj_distr, m)
 
         self.traj_opt = hyperparams['traj_opt']['type'](
             hyperparams['traj_opt']

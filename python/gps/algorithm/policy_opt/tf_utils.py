@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-
+import tensorflow.contrib.slim as slim
 
 def check_list_and_convert(the_object):
     if isinstance(the_object, list):
@@ -67,27 +67,32 @@ class TfMap:
 class TfSolver:
     """ A container for holding solver hyperparams in tensorflow. Used to execute backwards pass. """
     def __init__(self, loss_scalar, solver_name='adam', base_lr=None, lr_policy=None,
-                 momentum=None, weight_decay=None, fc_vars=None,
-                 last_conv_vars=None, vars_to_opt=None):
+                 momentum=None, fc_vars=None,
+                 last_conv_vars=None, vars_to_opt=None,
+                 decay_rate=0.96, decay_steps=100000):
         self.base_lr = base_lr
         self.lr_policy = lr_policy
         self.momentum = momentum
         self.solver_name = solver_name
         self.loss_scalar = loss_scalar
-        if self.lr_policy != 'fixed':
-            raise NotImplementedError('learning rate policies other than fixed are not implemented')
+        self.global_step = tf.placeholder(tf.int32, name='global_step')
+        if self.lr_policy == 'exp':
+            self.lr = tf.train.exponential_decay(self.base_lr,
+                                                 self.global_step,
+                                                 decay_steps=decay_steps,
+                                                 decay_rate=decay_rate,
+                                                 staircase=True)
+        elif self.lr_policy == 'fixed':
+            self.lr = self.base_lr
+        else:
+            raise NotImplementedError('learning rate policies other than fixed and exp are not implemented')
 
-        self.weight_decay = weight_decay
-        if weight_decay is not None:
-            if vars_to_opt is None:
-                trainable_vars = tf.trainable_variables()
-            else:
-                trainable_vars = vars_to_opt
-            loss_with_reg = self.loss_scalar
-            for var in trainable_vars:
-                loss_with_reg += self.weight_decay*tf.nn.l2_loss(var)
-            self.loss_scalar = loss_with_reg
-
+        self.loss_scalar = slim.losses.get_total_loss()
+        update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
+        if update_ops:
+            self.bn_update_ops = tf.group(*update_ops)
+        else:
+            self.bn_update_ops = tf.no_op()
         self.solver_op = self.get_solver_op()
         if fc_vars is not None:
             self.fc_vars = fc_vars
@@ -101,21 +106,24 @@ class TfSolver:
         if loss is None:
             loss = self.loss_scalar
         if solver_string == 'adam':
-            return tf.train.AdamOptimizer(learning_rate=self.base_lr,
-                                          beta1=self.momentum).minimize(loss, var_list=var_list)
+            optimizer = tf.train.AdamOptimizer(learning_rate=self.lr, beta1=self.momentum)
         elif solver_string == 'rmsprop':
-            return tf.train.RMSPropOptimizer(learning_rate=self.base_lr,
-                                             decay=self.momentum).minimize(loss, var_list=var_list)
+            optimizer = tf.train.RMSPropOptimizer(learning_rate=self.lr, decay=self.momentum)
         elif solver_string == 'momentum':
-            return tf.train.MomentumOptimizer(learning_rate=self.base_lr,
-                                              momentum=self.momentum).minimize(loss, var_list=var_list)
+            optimizer = tf.train.MomentumOptimizer(learning_rate=self.lr, momentum=self.momentum)
         elif solver_string == 'adagrad':
-            return tf.train.AdagradOptimizer(learning_rate=self.base_lr,
-                                             initial_accumulator_value=self.momentum).minimize(loss, var_list=var_list)
+            optimizer = tf.train.AdagradOptimizer(learning_rate=self.lr, initial_accumulator_value=self.momentum)
         elif solver_string == 'sgd':
-            return tf.train.GradientDescentOptimizer(learning_rate=self.base_lr).minimize(loss, var_list=var_list)
+            optimizer = tf.train.GradientDescentOptimizer(learning_rate=self.lr)
         else:
             raise NotImplementedError("Please select a valid optimizer.")
+
+        self.grads_and_vars = optimizer.compute_gradients(loss, var_list=var_list)
+        self.clipped_grads_and_vars = [(tf.clip_by_norm(grad, 10), var)
+                                       for grad, var in self.grads_and_vars if grad is not None]
+
+        solver_op = optimizer.apply_gradients(self.clipped_grads_and_vars)
+        return solver_op
 
     def get_last_conv_values(self, sess, feed_dict, num_values, batch_size):
         i = 0
@@ -123,8 +131,8 @@ class TfSolver:
         while i < num_values:
             batch_dict = {}
             start = i
-            end = min(i+batch_size, num_values)
-            for k,v in feed_dict.iteritems():
+            end = min(i + batch_size, num_values)
+            for k, v in feed_dict.iteritems():
                 batch_dict[k] = v[start:end]
             batch_vals = sess.run(self.last_conv_vars, batch_dict)
             values.append(batch_vals)
@@ -139,8 +147,8 @@ class TfSolver:
         while i < num_values:
             batch_dict = {}
             start = i
-            end = min(i+batch_size, num_values)
-            for k,v in feed_dict.iteritems():
+            end = min(i + batch_size, num_values)
+            for k, v in feed_dict.iteritems():
                 batch_dict[k] = v[start:end]
             batch_vals = sess.run(var, batch_dict)
             values.append(batch_vals)
@@ -149,11 +157,24 @@ class TfSolver:
         final_values = np.concatenate([values[i] for i in range(len(values))])
         return final_values
 
-    def __call__(self, feed_dict, sess, device_string="/cpu:0", use_fc_solver=False):
+    def __call__(self, feed_dict, global_step, sess, device_string="/cpu:0", use_fc_solver=False):
+        if self.lr_policy == 'exp':
+            feed_dict[self.global_step] = global_step
         with tf.device(device_string):
-            if use_fc_solver:
-                loss = sess.run([self.loss_scalar, self.fc_solver_op], feed_dict)
-            else:
-                loss = sess.run([self.loss_scalar, self.solver_op], feed_dict)
-            return loss[0]
+            with sess.graph.control_dependencies([self.bn_update_ops]):
+                if use_fc_solver:
+                    loss, _ = sess.run([self.loss_scalar, self.fc_solver_op], feed_dict)
+
+                else:
+                    loss, _ = sess.run([self.loss_scalar, self.solver_op], feed_dict)
+                    # loss, _, grads = sess.run([self.loss_scalar, self.solver_op,self.clipped_grads_and_vars], feed_dict)
+
+                    # norm = 0
+                    # i = 0
+                    # for grad, var in grads:
+                    #     norm += np.linalg.norm(grad)
+                    #     i += 1
+                    # print 'learning rate:', sess.run(self.lr, feed_dict=feed_dict), '   grads:', norm /float(i)
+            return loss
+
 

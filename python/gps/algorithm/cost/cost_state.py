@@ -6,7 +6,7 @@ import numpy as np
 from gps.algorithm.cost.config import COST_STATE
 from gps.algorithm.cost.cost import Cost
 from gps.algorithm.cost.cost_utils import evall1l2term, get_ramp_multiplier
-
+from gps.proto.gps_pb2 import END_EFFECTOR_POINT_TARGET_POSITION
 
 class CostState(Cost):
     """ Computes l1/l2 distance to a fixed target state. """
@@ -35,7 +35,8 @@ class CostState(Cost):
         for data_type in self._hyperparams['data_types']:
             config = self._hyperparams['data_types'][data_type]
             wp = config['wp']
-            tgt = config['target_state']
+            # tgt = config['target_state']
+            tgt = sample.get(END_EFFECTOR_POINT_TARGET_POSITION)
             x = sample.get(data_type)
             _, dim_sensor = x.shape
 

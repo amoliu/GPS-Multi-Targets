@@ -67,6 +67,7 @@ class Textbox:
     def draw(self):
         color, alpha = self._ax.get_axis_bgcolor(), self._ax.get_alpha()
         self._ax.set_axis_bgcolor(mpl.rcParams['figure.facecolor'])
+
         self._ax.draw_artist(self._ax.patch)
         self._ax.set_axis_bgcolor(ColorConverter().to_rgba(color, alpha))
 

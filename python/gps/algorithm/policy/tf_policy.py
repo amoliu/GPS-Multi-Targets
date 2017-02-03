@@ -20,7 +20,7 @@ class TfPolicy(Policy):
         sess: tf session.
         device_string: tf device string for running on either gpu or cpu.
     """
-    def __init__(self, dU, obs_tensor, act_op, feat_op, var, sess, device_string, copy_param_scope=None):
+    def __init__(self, dU, obs_tensor, act_op, feat_op, var, sess, device_string, is_training, copy_param_scope=None):
         Policy.__init__(self)
         self.dU = dU
         self.obs_tensor = obs_tensor
@@ -28,13 +28,14 @@ class TfPolicy(Policy):
         self.feat_op = feat_op
         self.sess = sess
         self.device_string = device_string
+        self.is_training = is_training
         self.chol_pol_covar = np.diag(np.sqrt(var))
         self.scale = None  # must be set from elsewhere based on observations
         self.bias = None
         self.x_idx = None
 
         if copy_param_scope:
-            self.copy_params = tf.get_collection(tf.GraphKeys.VARIABLES, scope=copy_param_scope)
+            self.copy_params = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=copy_param_scope)
             self.copy_params_assign_placeholders = [tf.placeholder(tf.float32, shape=param.get_shape()) for
                                                       param in self.copy_params]
 
@@ -57,7 +58,8 @@ class TfPolicy(Policy):
             obs = np.expand_dims(obs, axis=0)
         obs[:, self.x_idx] = obs[:, self.x_idx].dot(self.scale) + self.bias
         with tf.device(self.device_string):
-            action_mean = self.sess.run(self.act_op, feed_dict={self.obs_tensor: obs})
+            action_mean = self.sess.run(self.act_op, feed_dict={self.is_training: False,
+                                                                self.obs_tensor: obs})
         if noise is None:
             u = action_mean
         else:
@@ -117,7 +119,7 @@ class TfPolicy(Policy):
                               batch_size=1, network_config=network_config)
 
         sess = tf.Session()
-        init_op = tf.initialize_all_variables()
+        init_op = tf.global_variables_initializer()
         sess.run(init_op)
         saver = tf.train.Saver()
         check_file = pol_dict['checkpoint_path_tf']

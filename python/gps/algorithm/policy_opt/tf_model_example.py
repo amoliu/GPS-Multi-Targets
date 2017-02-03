@@ -1,6 +1,7 @@
 """ This file provides an example tensorflow network used to define a policy. """
 
 import tensorflow as tf
+import tensorflow.contrib.slim as slim
 from gps.algorithm.policy_opt.tf_utils import TfMap
 import numpy as np
 
@@ -27,7 +28,9 @@ def euclidean_loss_layer(a, b, precision, batch_size):
     scale_factor = tf.constant(2*batch_size, dtype='float')
     uP = batched_matrix_vector_multiply(a-b, precision)
     uPu = tf.reduce_sum(uP*(a-b))  # this last dot product is then summed, so we just the sum all at once.
-    return uPu/scale_factor
+    loss = uPu/scale_factor
+    tf.add_to_collection(tf.GraphKeys.LOSSES, loss)
+    return loss
 
 
 def get_input_layer(dim_input, dim_output):
@@ -67,28 +70,74 @@ def get_loss_layer(mlp_out, action, precision, batch_size):
     return euclidean_loss_layer(a=action, b=mlp_out, precision=precision, batch_size=batch_size)
 
 
-def example_tf_network(dim_input=27, dim_output=7, batch_size=25, network_config=None):
+def example_tf_network(is_training = True, dim_input=27, dim_output=7, batch_size=25, network_config=None, weight_decay=0.005):
     """
     An example of how one might want to specify a network in tensorflow.
 
     Args:
+        is_training: if it is at training stage
         dim_input: Dimensionality of input.
         dim_output: Dimensionality of the output.
         batch_size: Batch size.
     Returns:
         a TfMap object used to serialize, inputs, outputs, and loss.
     """
-    n_layers = 2
-    dim_hidden = (n_layers - 1) * [40]
-    dim_hidden.append(dim_output)
-
+    # dim_hidden = [20] #[128, 64]
+    dim_hidden = network_config['dim_hidden']
+    # dim_hidden.append(dim_output)
     nn_input, action, precision = get_input_layer(dim_input, dim_output)
-    mlp_applied, weights_FC, biases_FC = get_mlp_layers(nn_input, n_layers, dim_hidden)
-    fc_vars = weights_FC + biases_FC
+    with slim.arg_scope([slim.fully_connected],
+                        weights_initializer=tf.truncated_normal_initializer(stddev=0.01),
+                        weights_regularizer=slim.l2_regularizer(weight_decay),
+                        activation_fn=tf.nn.relu):
+        mlp_applied = slim.stack(nn_input, slim.fully_connected, dim_hidden, scope='fc')
+        mlp_applied = slim.fully_connected(mlp_applied, num_outputs=dim_output, activation_fn=None, scope='action_output')
     loss_out = get_loss_layer(mlp_out=mlp_applied, action=action, precision=precision, batch_size=batch_size)
+    fc_vars = tf.trainable_variables()
 
     return TfMap.init_from_lists([nn_input, action, precision], [mlp_applied], [loss_out]), fc_vars, []
 
+def example_tf_network_with_BN(is_training, dim_input=27, dim_output=7, batch_size=25, network_config=None, weight_decay=0.005):
+    """
+    An example with batch normalization of how one might want to specify a network in tensorflow.
+
+    Args:
+        is_training: if it is at training stage
+        dim_input: Dimensionality of input.
+        dim_output: Dimensionality of the output.
+        batch_size: Batch size.
+    Returns:
+        a TfMap object used to serialize, inputs, outputs, and loss.
+    """
+    # dim_hidden = [256, 64]
+    dim_hidden = network_config['dim_hidden']
+    # dim_hidden.append(dim_output)
+    nn_input, action, precision = get_input_layer(dim_input, dim_output)
+    net = nn_input
+
+    batch_norm_params = {'is_training': is_training,
+                         'center': True,
+                         'scale': True,
+                         'decay': 0.9}
+
+    with slim.arg_scope([slim.fully_connected],
+                        weights_initializer=tf.truncated_normal_initializer(stddev=0.01),
+                        weights_regularizer=slim.l2_regularizer(weight_decay),
+                        activation_fn=tf.nn.relu,
+                        normalizer_fn=slim.batch_norm,
+                        normalizer_params=batch_norm_params
+                        ):
+        # for i in range(len(dim_hidden):
+        #     net = slim.fully_connected(net, num_outputs=dim_hidden[i])
+            # net = slim.batch_norm(net, activation_fn=tf.nn.relu, updates_collections=None)
+        # net = slim.batch_norm(net, activation_fn=None, **batch_norm_params)
+        net = slim.stack(net, slim.fully_connected, dim_hidden, scope='fc')
+        mlp_applied = slim.fully_connected(net, num_outputs=dim_output, scope='action_output',
+                                           activation_fn=None, normalizer_fn=None)
+    loss_out = get_loss_layer(mlp_out=mlp_applied, action=action, precision=precision, batch_size=batch_size)
+    fc_vars = tf.trainable_variables()
+
+    return TfMap.init_from_lists([nn_input, action, precision], [mlp_applied], [loss_out]), fc_vars, []
 
 def multi_modal_network(dim_input=27, dim_output=7, batch_size=25, network_config=None):
     """
