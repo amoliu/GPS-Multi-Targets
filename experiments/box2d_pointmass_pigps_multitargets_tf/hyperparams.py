@@ -65,8 +65,8 @@ def generate_goals(bound_x, bound_y, target_x_num, target_y_num, start_x_num, st
 start_x_num = 2
 start_y_num = 2
 start_conditions = start_x_num * start_y_num
-target_x_num = 3
-target_y_num = 3
+target_x_num = 5
+target_y_num = 5
 target_state_conditions = target_x_num * target_y_num
 
 x0, target_state = generate_goals(bound_x,
