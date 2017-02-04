@@ -18,7 +18,7 @@ from gps.algorithm.dynamics.dynamics_prior_gmm import DynamicsPriorGMM
 from gps.algorithm.policy_opt.policy_opt_tf import PolicyOptTf
 from gps.algorithm.traj_opt.traj_opt_pi2 import TrajOptPi2
 from gps.algorithm.policy.policy_prior import PolicyPrior
-from gps.algorithm.policy.lin_gauss_init import init_pd
+from gps.algorithm.policy.lin_gauss_init import init_pd, init_lqr
 from gps.proto.gps_pb2 import END_EFFECTOR_POINTS, END_EFFECTOR_POINT_VELOCITIES, END_EFFECTOR_POINT_TARGET_POSITION, ACTION
 from gps.gui.config import generate_experiment_info
 from gps.algorithm.traj_opt.traj_opt_lqr_python import TrajOptLQRPython
@@ -159,7 +159,7 @@ algorithm = {
 }
 
 algorithm['init_traj_distr'] = {
-    'type': init_pd,
+    'type': init_lqr,
     'init_var': 1.0,
     'pos_gains': 0.0,
     'dQ': SENSOR_DIMS[ACTION],
