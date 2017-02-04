@@ -241,7 +241,7 @@ class TrajOptLQRPython(TrajOpt):
                 # Compute Cholesky decomposition of Q function action
                 # component.
                 try:
-                    U = sp.linalg.cholesky(Qtt[idx_u, idx_u])
+                    U = sp.linalg.cholesky(Qtt[idx_u, idx_u] + 1e-6 * np.eye(dU))
                     L = U.T
                 except LinAlgError as e:
                     # Error thrown when Qtt[idx_u, idx_u] is not
