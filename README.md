@@ -18,6 +18,6 @@ This version adds following features:
 * Create a **UR agent** which has stable action publish frequency
 * Add support for **multithreading** sampling for UR agent
 * Replace the original GMM with [GaussianMixture](http://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture) from sklearn
-* Add experiments which can train UR robot to go to any target position
-* Add experiments which can train UR robot to go to any target poisition with specified orientation
+* Add experiments which can train UR robot to go to [any target position](https://github.com/CTTC/GPS-Multi-Targets/tree/master/experiments/ur_tf_mdgps_multitargets)
+* Add experiments which can train UR robot to go to [any target poisition with specified orientation](https://github.com/CTTC/GPS-Multi-Targets/tree/master/experiments/ur_tf_mdgps_pose_multi_targets_multi_ori)
 * Add `AlgorithmSL` to support training agent with pure supervised learning without any optimal control, to demonstrate the necessity of optimal control
