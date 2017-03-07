@@ -1,0 +1,1028 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style>@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css';code{color:#c7254e;background-color:#f9f2f4;border-radius:4px}code,kbd{padding:2px 4px}kbd{color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}kbd kbd{padding:0;font-size:100%;box-shadow:none}pre{display:block;margin:0 0 10px;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}table{background-color:transparent}th{text-align:left}.table{width:100%;max-width:100%;margin-bottom:20px}.table>thead>tr>th{padding:8px;line-height:1.4285714;border-top:1px solid #ddd}.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td{padding:8px;line-height:1.4285714;vertical-align:top;border-top:1px solid #ddd}.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}.table>caption+thead>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>th,.table>thead:first-child>tr:first-child>td{border-top:0}.table>tbody+tbody{border-top:2px solid #ddd}.table .table{background-color:#fff}.table-condensed>thead>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>tfoot>tr>td{padding:5px}.table-bordered,.table-bordered>thead>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>tfoot>tr>td{border:1px solid #ddd}.table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px}.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}.table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th{background-color:#f5f5f5}table col[class*="col-"]{position:static;float:none;display:table-column}table td[class*="col-"],table th[class*="col-"]{position:static;float:none;display:table-cell}.table>thead>tr>td.active,.table>thead>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th{background-color:#f5f5f5}.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover,.table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr.active:hover>th{background-color:#e8e8e8}.table>thead>tr>td.success,.table>thead>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th{background-color:#dff0d8}.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover,.table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr.success:hover>th{background-color:#d0e9c6}.table>thead>tr>td.info,.table>thead>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th{background-color:#d9edf7}.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover,.table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr.info:hover>th{background-color:#c4e3f3}.table>thead>tr>td.warning,.table>thead>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th{background-color:#fcf8e3}.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover,.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr.warning:hover>th{background-color:#faf2cc}.table>thead>tr>td.danger,.table>thead>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th{background-color:#f2dede}.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover,.table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr.danger:hover>th{background-color:#ebcccc}fieldset{border:0;min-width:0}legend{display:block;width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;color:#333;border-bottom:1px solid #e5e5e5}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type="radio"],input[type="checkbox"]{margin:4px 0 0;margin-top:1px \9;line-height:normal}input[type="file"]{display:block}input[type="range"]{display:block;width:100%}select[multiple],select[size]{height:auto}input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}output{padding-top:7px}output,.form-control{display:block;font-size:14px;line-height:1.4285714;color:#555}.form-control{width:100%;height:34px;padding:6px 12px;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.form-control::-moz-placeholder{color:#777;opacity:1}.form-control:-ms-input-placeholder{color:#777}.form-control::-webkit-input-placeholder{color:#777}.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{cursor:not-allowed;background-color:#eee;opacity:1}textarea.form-control{height:auto}input[type="date"],input[type="time"],input[type="datetime-local"],input[type="month"]{line-height:34px;line-height:1.4285714 \0}input[type="date"].input-sm,.form-horizontal .form-group-sm input[type="date"].form-control,.input-group-sm>input[type="date"].form-control,.input-group-sm>input[type="date"].input-group-addon,.input-group-sm>.input-group-btn>input[type="date"].btn,input[type="time"].input-sm,.form-horizontal .form-group-sm input[type="time"].form-control,.input-group-sm>input[type="time"].form-control,.input-group-sm>input[type="time"].input-group-addon,.input-group-sm>.input-group-btn>input[type="time"].btn,input[type="datetime-local"].input-sm,.form-horizontal .form-group-sm input[type="datetime-local"].form-control,.input-group-sm>input[type="datetime-local"].form-control,.input-group-sm>input[type="datetime-local"].input-group-addon,.input-group-sm>.input-group-btn>input[type="datetime-local"].btn,input[type="month"].input-sm,.form-horizontal .form-group-sm input[type="month"].form-control,.input-group-sm>input[type="month"].form-control,.input-group-sm>input[type="month"].input-group-addon,.input-group-sm>.input-group-btn>input[type="month"].btn{line-height:30px}input[type="date"].input-lg,.form-horizontal .form-group-lg input[type="date"].form-control,.input-group-lg>input[type="date"].form-control,.input-group-lg>input[type="date"].input-group-addon,.input-group-lg>.input-group-btn>input[type="date"].btn,input[type="time"].input-lg,.form-horizontal .form-group-lg input[type="time"].form-control,.input-group-lg>input[type="time"].form-control,.input-group-lg>input[type="time"].input-group-addon,.input-group-lg>.input-group-btn>input[type="time"].btn,input[type="datetime-local"].input-lg,.form-horizontal .form-group-lg input[type="datetime-local"].form-control,.input-group-lg>input[type="datetime-local"].form-control,.input-group-lg>input[type="datetime-local"].input-group-addon,.input-group-lg>.input-group-btn>input[type="datetime-local"].btn,input[type="month"].input-lg,.form-horizontal .form-group-lg input[type="month"].form-control,.input-group-lg>input[type="month"].form-control,.input-group-lg>input[type="month"].input-group-addon,.input-group-lg>.input-group-btn>input[type="month"].btn{line-height:46px}.form-group{margin-bottom:15px}.radio,.checkbox{position:relative;display:block;min-height:20px;margin-top:10px;margin-bottom:10px}.radio label,.checkbox label{padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer}.radio input[type="radio"],.radio-inline input[type="radio"],.checkbox input[type="checkbox"],.checkbox-inline input[type="checkbox"]{position:absolute;margin-left:-20px;margin-top:4px \9}.radio+.radio,.checkbox+.checkbox{margin-top:-5px}.radio-inline,.checkbox-inline{display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:400;cursor:pointer}.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-top:0;margin-left:10px}input[type="radio"][disabled],input[type="radio"].disabled,fieldset[disabled] input[type="radio"],input[type="checkbox"][disabled],input[type="checkbox"].disabled,fieldset[disabled] input[type="checkbox"],.radio-inline.disabled,fieldset[disabled] .radio-inline,.checkbox-inline.disabled,fieldset[disabled] .checkbox-inline,.radio.disabled label,fieldset[disabled] .radio label,.checkbox.disabled label,fieldset[disabled] .checkbox label{cursor:not-allowed}.form-control-static{padding-top:7px;padding-bottom:7px;margin-bottom:0}.form-control-static.input-lg,.form-horizontal .form-group-lg .form-control-static.form-control,.input-group-lg>.form-control-static.form-control,.input-group-lg>.form-control-static.input-group-addon,.input-group-lg>.input-group-btn>.form-control-static.btn,.form-control-static.input-sm,.form-horizontal .form-group-sm .form-control-static.form-control,.input-group-sm>.form-control-static.form-control,.input-group-sm>.form-control-static.input-group-addon,.input-group-sm>.input-group-btn>.form-control-static.btn{padding-left:0;padding-right:0}.input-sm,.form-horizontal .form-group-sm .form-control,.input-group-sm>.form-control{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.input-group-sm>.input-group-addon{height:30px;line-height:1.5}.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-sm,.form-horizontal .form-group-sm select.form-control,.input-group-sm>select.form-control,.input-group-sm>select.input-group-addon,.input-group-sm>.input-group-btn>select.btn{height:30px;line-height:30px}textarea.input-sm,.form-horizontal .form-group-sm textarea.form-control,.input-group-sm>textarea.form-control,.input-group-sm>textarea.input-group-addon,.input-group-sm>.input-group-btn>textarea.btn,select[multiple].input-sm,.form-horizontal .form-group-sm select[multiple].form-control,.input-group-sm>select[multiple].form-control,.input-group-sm>select[multiple].input-group-addon,.input-group-sm>.input-group-btn>select[multiple].btn{height:auto}.input-lg,.form-horizontal .form-group-lg .form-control,.input-group-lg>.form-control{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.input-group-lg>.input-group-addon{height:46px;line-height:1.33}.input-group-lg>.input-group-btn>.btn{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}select.input-lg,.form-horizontal .form-group-lg select.form-control,.input-group-lg>select.form-control,.input-group-lg>select.input-group-addon,.input-group-lg>.input-group-btn>select.btn{height:46px;line-height:46px}textarea.input-lg,.form-horizontal .form-group-lg textarea.form-control,.input-group-lg>textarea.form-control,.input-group-lg>textarea.input-group-addon,.input-group-lg>.input-group-btn>textarea.btn,select[multiple].input-lg,.form-horizontal .form-group-lg select[multiple].form-control,.input-group-lg>select[multiple].form-control,.input-group-lg>select[multiple].input-group-addon,.input-group-lg>.input-group-btn>select[multiple].btn{height:auto}.has-feedback{position:relative}.has-feedback .form-control{padding-right:42.5px}.form-control-feedback{position:absolute;top:25px;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}.input-lg+.form-control-feedback,.form-horizontal .form-group-lg .form-control+.form-control-feedback,.input-group-lg>.form-control+.form-control-feedback,.input-group-lg>.input-group-addon+.form-control-feedback,.input-group-lg>.input-group-btn>.btn+.form-control-feedback{width:46px;height:46px;line-height:46px}.input-sm+.form-control-feedback,.form-horizontal .form-group-sm .form-control+.form-control-feedback,.input-group-sm>.form-control+.form-control-feedback,.input-group-sm>.input-group-addon+.form-control-feedback,.input-group-sm>.input-group-btn>.btn+.form-control-feedback{width:30px;height:30px;line-height:30px}.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline{color:#3c763d}.has-success .form-control{border-color:#3c763d;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-success .form-control:focus{border-color:#2b542c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168}.has-success .input-group-addon{color:#3c763d;border-color:#3c763d;background-color:#dff0d8}.has-success .form-control-feedback{color:#3c763d}.has-warning .help-block,.has-warning .control-label,.has-warning .radio,.has-warning .checkbox,.has-warning .radio-inline,.has-warning .checkbox-inline{color:#8a6d3b}.has-warning .form-control{border-color:#8a6d3b;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-warning .form-control:focus{border-color:#66512c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b}.has-warning .input-group-addon{color:#8a6d3b;border-color:#8a6d3b;background-color:#fcf8e3}.has-warning .form-control-feedback{color:#8a6d3b}.has-error .help-block,.has-error .control-label,.has-error .radio,.has-error .checkbox,.has-error .radio-inline,.has-error .checkbox-inline{color:#a94442}.has-error .form-control{border-color:#a94442;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-error .form-control:focus{border-color:#843534;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483}.has-error .input-group-addon{color:#a94442;border-color:#a94442;background-color:#f2dede}.has-error .form-control-feedback{color:#a94442}.has-feedback label.sr-only~.form-control-feedback{top:0}.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}.form-horizontal .radio,.form-horizontal .checkbox,.form-horizontal .radio-inline,.form-horizontal .checkbox-inline{margin-top:0;margin-bottom:0;padding-top:7px}.form-horizontal .radio,.form-horizontal .checkbox{min-height:27px}.form-horizontal .form-group{margin-left:-15px;margin-right:-15px}.form-horizontal .form-group:before{content:" ";display:table}.form-horizontal .form-group:after{content:" ";display:table;clear:both}.form-horizontal .has-feedback .form-control-feedback{top:0;right:15px}.btn{display:inline-block;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn:focus,.btn:active:focus,.btn.active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:hover,.btn:focus{color:#333;text-decoration:none}.btn:active,.btn.active{outline:0;background-image:none;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;pointer-events:none;opacity:.65;filter:alpha(opacity=65);box-shadow:none}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{color:#333;background-color:#e6e6e6;border-color:#adadad}.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{background-image:none}.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled:active,.btn-default.disabled.active,.btn-default[disabled],.btn-default[disabled]:hover,.btn-default[disabled]:focus,.btn-default[disabled]:active,.btn-default[disabled].active,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default:hover,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default.active{background-color:#fff;border-color:#ccc}.btn-default .badge{color:#fff;background-color:#333}.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd}.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{color:#fff;background-color:#3071a9;border-color:#285e8e}.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{background-image:none}.btn-primary.disabled,.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled:active,.btn-primary.disabled.active,.btn-primary[disabled],.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary[disabled]:active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary:hover,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary.active{background-color:#428bca;border-color:#357ebd}.btn-primary .badge{color:#428bca;background-color:#fff}.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{color:#fff;background-color:#449d44;border-color:#398439}.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{background-image:none}.btn-success.disabled,.btn-success.disabled:hover,.btn-success.disabled:focus,.btn-success.disabled:active,.btn-success.disabled.active,.btn-success[disabled],.btn-success[disabled]:hover,.btn-success[disabled]:focus,.btn-success[disabled]:active,.btn-success[disabled].active,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success:hover,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success.active{background-color:#5cb85c;border-color:#4cae4c}.btn-success .badge{color:#5cb85c;background-color:#fff}.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{color:#fff;background-color:#31b0d5;border-color:#269abc}.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{background-image:none}.btn-info.disabled,.btn-info.disabled:hover,.btn-info.disabled:focus,.btn-info.disabled:active,.btn-info.disabled.active,.btn-info[disabled],.btn-info[disabled]:hover,.btn-info[disabled]:focus,.btn-info[disabled]:active,.btn-info[disabled].active,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info:hover,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info.active{background-color:#5bc0de;border-color:#46b8da}.btn-info .badge{color:#5bc0de;background-color:#fff}.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{color:#fff;background-color:#ec971f;border-color:#d58512}.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{background-image:none}.btn-warning.disabled,.btn-warning.disabled:hover,.btn-warning.disabled:focus,.btn-warning.disabled:active,.btn-warning.disabled.active,.btn-warning[disabled],.btn-warning[disabled]:hover,.btn-warning[disabled]:focus,.btn-warning[disabled]:active,.btn-warning[disabled].active,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning:hover,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning.active{background-color:#f0ad4e;border-color:#eea236}.btn-warning .badge{color:#f0ad4e;background-color:#fff}.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{color:#fff;background-color:#c9302c;border-color:#ac2925}.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{background-image:none}.btn-danger.disabled,.btn-danger.disabled:hover,.btn-danger.disabled:focus,.btn-danger.disabled:active,.btn-danger.disabled.active,.btn-danger[disabled],.btn-danger[disabled]:hover,.btn-danger[disabled]:focus,.btn-danger[disabled]:active,.btn-danger[disabled].active,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger:hover,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger.active{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}.btn-link{color:#428bca;font-weight:400;cursor:pointer;border-radius:0}.btn-link,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;box-shadow:none}.btn-link,.btn-link:hover,.btn-link:focus,.btn-link:active{border-color:transparent}.btn-link:hover,.btn-link:focus{color:#2a6496;text-decoration:underline;background-color:transparent}.btn-link[disabled]:hover,.btn-link[disabled]:focus,fieldset[disabled] .btn-link:hover,fieldset[disabled] .btn-link:focus{color:#777;text-decoration:none}.btn-lg{padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.btn-sm{padding:5px 10px}.btn-sm,.btn-xs{font-size:12px;line-height:1.5;border-radius:3px}.btn-xs{padding:1px 5px}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:5px}input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"].btn-block{width:100%}.fade{opacity:0;-webkit-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition:height .35s ease;transition:height .35s ease}.input-group{position:relative;display:table;border-collapse:separate}.input-group[class*="col-"]{float:none;padding-left:0;padding-right:0}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group-addon,.input-group-btn,.input-group .form-control{display:table-cell}.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control:not(:first-child):not(:last-child){border-radius:0}.input-group-addon{white-space:nowrap}.input-group-addon,.input-group-btn{width:1%;vertical-align:middle}.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}.input-group-addon.input-sm,.form-horizontal .form-group-sm .input-group-addon.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.input-group-addon.btn{padding:5px 10px;font-size:12px;border-radius:3px}.input-group-addon.input-lg,.form-horizontal .form-group-lg .input-group-addon.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.input-group-addon.btn{padding:10px 16px;font-size:18px;border-radius:6px}.input-group-addon input[type="radio"],.input-group-addon input[type="checkbox"]{margin-top:0}.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group-btn:last-child>.btn-group:not(:last-child)>.btn{border-bottom-right-radius:0;border-top-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:first-child>.btn-group:not(:first-child)>.btn{border-bottom-left-radius:0;border-top-left-radius:0}.input-group-addon:last-child{border-left:0}.input-group-btn{font-size:0;white-space:nowrap}.input-group-btn,.input-group-btn>.btn{position:relative}.input-group-btn>.btn+.btn{margin-left:-1px}.input-group-btn>.btn:hover,.input-group-btn>.btn:focus,.input-group-btn>.btn:active{z-index:2}.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group{margin-right:-1px}.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group{margin-left:-1px}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;line-height:1.4285714;text-decoration:none;color:#428bca;background-color:#fff;border:1px solid #ddd;margin-left:-1px}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:4px;border-top-right-radius:4px}.pagination>li>a:hover,.pagination>li>a:focus,.pagination>li>span:hover,.pagination>li>span:focus{color:#2a6496;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:hover,.pagination>.active>a:focus,.pagination>.active>span,.pagination>.active>span:hover,.pagination>.active>span:focus{z-index:2;color:#fff;background-color:#428bca;border-color:#428bca;cursor:default}.pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{color:#777;background-color:#fff;border-color:#ddd;cursor:not-allowed}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-bottom-left-radius:6px;border-top-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-bottom-right-radius:6px;border-top-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-bottom-left-radius:3px;border-top-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}.close:hover,.close:focus{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}.modal-open,.modal{overflow:hidden}.modal{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transform:translate3d(0,-25%,0);transform:translate3d(0,-25%,0);-webkit-transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out}.modal.in .modal-dialog{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 3px 9px rgba(0,0,0,.5);background-clip:padding-box;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}.modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;min-height:16.4285714px}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.4285714}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer:before,.modal-footer:after{content:" ";display:table}.modal-footer:after{clear:both}.modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important;visibility:hidden!important}.affix{position:fixed;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.hljs{display:block;overflow-x:auto;padding:.5em;background:#002b36;color:#839496;-webkit-text-size-adjust:none}.hljs-comment,.hljs-template_comment,.diff .hljs-header,.hljs-doctype,.hljs-pi,.lisp .hljs-string,.hljs-javadoc{color:#586e75}.hljs-keyword,.hljs-winutils,.method,.hljs-addition,.css .hljs-tag,.hljs-request,.hljs-status,.nginx .hljs-title{color:#859900}.hljs-number,.hljs-command,.hljs-string,.hljs-tag .hljs-value,.hljs-rules .hljs-value,.hljs-phpdoc,.hljs-dartdoc,.tex .hljs-formula,.hljs-regexp,.hljs-hexcolor,.hljs-link_url{color:#2aa198}.hljs-title,.hljs-localvars,.hljs-chunk,.hljs-decorator,.hljs-built_in,.hljs-identifier,.vhdl .hljs-literal,.hljs-id,.css .hljs-function{color:#268bd2}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number,.hljs-constant,.hljs-class .hljs-title,.hljs-parent,.hljs-type,.hljs-link_reference{color:#b58900}.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-pragma,.hljs-shebang,.hljs-symbol,.hljs-symbol .hljs-string,.diff .hljs-change,.hljs-special,.hljs-attr_selector,.hljs-subst,.hljs-cdata,.css .hljs-pseudo,.hljs-header{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#073642}*,*:before,*:after{box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}images{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd{font-size:1em}code,kbd,pre,samp{font-family:monospace,monospace}samp{font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}.debug{background-color:#ffc0cb!important}.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ir{background-color:transparent;border:0;overflow:hidden}.ir::before{content:'';display:block;height:150%;width:0}html{font-size:.875em;background:#fff;color:#373D49}html,body{font-family:Georgia,Cambria,serif;height:100%}body{font-size:1rem;font-weight:400;line-height:2rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}li{-webkit-font-feature-settings:'kern' 1,'onum' 1,'liga' 1;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-left:1rem}li>ul,li>ol{margin-bottom:0}p{padding-top:.66001rem;-webkit-font-feature-settings:'kern' 1,'onum' 1,'liga' 1;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-top:0}p,pre{margin-bottom:1.33999rem}pre{font-size:1rem;padding:.66001rem 9.5px 9.5px;line-height:2rem;background:-webkit-linear-gradient(top,#fff 0,#fff .75rem,#f5f7fa .75rem,#f5f7fa 2.75rem,#fff 2.75rem,#fff 4rem);background:linear-gradient(to bottom,#fff 0,#fff .75rem,#f5f7fa .75rem,#f5f7fa 2.75rem,#fff 2.75rem,#fff 4rem);background-size:100% 4rem;border-color:#D3DAEA}blockquote{margin:0}blockquote p{font-size:1rem;margin-bottom:.33999rem;font-style:italic;padding:.66001rem 1rem 1rem;border-left:3px solid #A0AABF}th,td{padding:12px}h1,h2,h3,h4,h5,h6{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;font-style:normal;font-weight:600;margin-top:0}h1{line-height:3rem;font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h2,h3{line-height:3rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}a{cursor:pointer;color:#35D7BB;text-decoration:none}a:hover,a:focus{border-bottom-color:#35D7BB;color:#dff9f4}img{height:auto;max-width:100%}.g{display:block}.g:after{clear:both;content:'';display:table}.g-b{float:left;margin:0;width:100%}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--center{display:block;float:none;margin:0 auto}.g-b--right{float:right}.g-b--1of1{width:100%}.g-b--1of2,.g-b--2of4,.g-b--3of6,.g-b--4of8,.g-b--5of10,.g-b--6of12{width:50%}.g-b--1of3,.g-b--2of6,.g-b--4of12{width:33.333%}.g-b--2of3,.g-b--4of6,.g-b--8of12{width:66.666%}.g-b--1of4,.g-b--2of8,.g-b--3of12{width:25%}.g-b--3of4,.g-b--6of8,.g-b--9of12{width:75%}.g-b--1of5,.g-b--2of10{width:20%}.g-b--2of5,.g-b--4of10{width:40%}.g-b--3of5,.g-b--6of10{width:60%}.g-b--4of5,.g-b--8of10{width:80%}.g-b--1of6,.g-b--2of12{width:16.666%}.g-b--5of6,.g-b--10of12{width:83.333%}.g-b--1of8{width:12.5%}.g-b--3of8{width:37.5%}.g-b--5of8{width:62.5%}.g-b--7of8{width:87.5%}.g-b--1of10{width:10%}.g-b--3of10{width:30%}.g-b--7of10{width:70%}.g-b--9of10{width:90%}.g-b--1of12{width:8.333%}.g-b--5of12{width:41.666%}.g-b--7of12{width:58.333%}.g-b--11of12{width:91.666%}.g-b--push--1of1{margin-left:100%}.g-b--push--1of2,.g-b--push--2of4,.g-b--push--3of6,.g-b--push--4of8,.g-b--push--5of10,.g-b--push--6of12{margin-left:50%}.g-b--push--1of3,.g-b--push--2of6,.g-b--push--4of12{margin-left:33.333%}.g-b--push--2of3,.g-b--push--4of6,.g-b--push--8of12{margin-left:66.666%}.g-b--push--1of4,.g-b--push--2of8,.g-b--push--3of12{margin-left:25%}.g-b--push--3of4,.g-b--push--6of8,.g-b--push--9of12{margin-left:75%}.g-b--push--1of5,.g-b--push--2of10{margin-left:20%}.g-b--push--2of5,.g-b--push--4of10{margin-left:40%}.g-b--push--3of5,.g-b--push--6of10{margin-left:60%}.g-b--push--4of5,.g-b--push--8of10{margin-left:80%}.g-b--push--1of6,.g-b--push--2of12{margin-left:16.666%}.g-b--push--5of6,.g-b--push--10of12{margin-left:83.333%}.g-b--push--1of8{margin-left:12.5%}.g-b--push--3of8{margin-left:37.5%}.g-b--push--5of8{margin-left:62.5%}.g-b--push--7of8{margin-left:87.5%}.g-b--push--1of10{margin-left:10%}.g-b--push--3of10{margin-left:30%}.g-b--push--7of10{margin-left:70%}.g-b--push--9of10{margin-left:90%}.g-b--push--1of12{margin-left:8.333%}.g-b--push--5of12{margin-left:41.666%}.g-b--push--7of12{margin-left:58.333%}.g-b--push--11of12{margin-left:91.666%}.g-b--pull--1of1{margin-right:100%}.g-b--pull--1of2,.g-b--pull--2of4,.g-b--pull--3of6,.g-b--pull--4of8,.g-b--pull--5of10,.g-b--pull--6of12{margin-right:50%}.g-b--pull--1of3,.g-b--pull--2of6,.g-b--pull--4of12{margin-right:33.333%}.g-b--pull--2of3,.g-b--pull--4of6,.g-b--pull--8of12{margin-right:66.666%}.g-b--pull--1of4,.g-b--pull--2of8,.g-b--pull--3of12{margin-right:25%}.g-b--pull--3of4,.g-b--pull--6of8,.g-b--pull--9of12{margin-right:75%}.g-b--pull--1of5,.g-b--pull--2of10{margin-right:20%}.g-b--pull--2of5,.g-b--pull--4of10{margin-right:40%}.g-b--pull--3of5,.g-b--pull--6of10{margin-right:60%}.g-b--pull--4of5,.g-b--pull--8of10{margin-right:80%}.g-b--pull--1of6,.g-b--pull--2of12{margin-right:16.666%}.g-b--pull--5of6,.g-b--pull--10of12{margin-right:83.333%}.g-b--pull--1of8{margin-right:12.5%}.g-b--pull--3of8{margin-right:37.5%}.g-b--pull--5of8{margin-right:62.5%}.g-b--pull--7of8{margin-right:87.5%}.g-b--pull--1of10{margin-right:10%}.g-b--pull--3of10{margin-right:30%}.g-b--pull--7of10{margin-right:70%}.g-b--pull--9of10{margin-right:90%}.g-b--pull--1of12{margin-right:8.333%}.g-b--pull--5of12{margin-right:41.666%}.g-b--pull--7of12{margin-right:58.333%}.g-b--pull--11of12{margin-right:91.666%}.splashscreen{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#373D49;z-index:22}.splashscreen-dillinger{width:260px;height:auto;display:block;margin:0 auto;padding-bottom:3rem}.splashscreen p{font-size:1.25rem;padding-top:.56251rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-align:center;max-width:500px;margin:0 auto;color:#FFF}.sp-center{position:relative;-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}.open-menu>.wrapper{overflow-x:hidden}.page{margin:0 auto;position:relative;top:0;left:0;width:100%;height:100%;z-index:2;-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out;background-color:#fff;padding-top:51px;will-change:left}.open-menu .page{left:270px}.title{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;color:#A0AABF;letter-spacing:1px;text-transform:uppercase;padding-left:16px;padding-right:16px;margin-top:1rem}.split-preview .title{padding-left:0}.title-document{line-height:1rem;font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem;font-weight:400;font-family:"Ubuntu Mono",Monaco;color:#373D49;padding-left:16px;padding-right:16px;width:80%;min-width:300px;outline:0;border:none}.icon{display:block;margin:0 auto;width:36px;height:36px;border-radius:3px;text-align:center}.icon svg{display:inline-block;margin-left:auto;margin-right:auto}.icon-preview{background-color:#373D49;line-height:40px}.icon-preview svg{width:19px;height:12px}.icon-settings{background-color:#373D49;line-height:44px}.icon-settings svg{width:18px;height:18px}.icon-link{width:16px;height:16px;line-height:1;margin-right:24px;text-align:right}.navbar{background-color:#373D49;height:51px;width:100%;position:fixed;top:0;left:0;z-index:6;-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out;will-change:left}.navbar:after{content:"";display:table;clear:both}.open-menu .navbar{left:270px}.navbar-brand{float:left;margin:0 0 0 24px;padding:0;line-height:42px}.navbar-brand svg{width:85px;height:11px}.nav-left{float:left}.nav-right{float:right}.nav-sidebar{width:100%}.menu{list-style:none;margin:0;padding:0}.menu a{border:0;color:#A0AABF;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;outline:none;text-transform:uppercase}.menu a:hover{color:#35D7BB}.menu .menu-item{border:0;display:none;float:left;margin:0;position:relative}.menu .menu-item>a{display:block;font-size:12px;height:51px;letter-spacing:1px;line-height:51px;padding:0 24px}.menu .menu-item--settings,.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar,.menu .menu-item--link-unlink.in-sidebar,.menu .menu-item--documents.in-sidebar{display:block}.menu .menu-item--documents{padding-bottom:1rem}.menu .menu-item.open>a{background-color:#1D212A}.menu .menu-item-icon>a{height:auto;padding:0}.menu .menu-item-icon:hover>a{background-color:transparent}.menu .menu-link.open i{background-color:#1D212A}.menu .menu-link.open g{fill:#35D7BB}.menu .menu-link-preview,.menu .menu-link-settings{margin-top:8px;width:51px}.menu-sidebar{width:100%}.menu-sidebar .menu-item{float:none;margin-bottom:1px;width:100%}.menu-sidebar .menu-item.open>a{background-color:#373D49}.menu-sidebar .open .caret{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.menu-sidebar>.menu-item:hover .dropdown a,.menu-sidebar>.menu-item:hover .settings a{background-color:transparent}.menu-sidebar .menu-link{background-color:#373D49;font-weight:600}.menu-sidebar .menu-link:after{content:"";display:table;clear:both}.menu-sidebar .menu-link>span{float:left}.menu-sidebar .menu-link>.caret{float:right;text-align:right;top:22px}.menu-sidebar .dropdown,.menu-sidebar .settings{background-color:transparent;position:static;width:100%}.dropdown{position:absolute;right:0;top:51px;width:188px}.dropdown,.settings{display:none;background-color:#1D212A}.dropdown{padding:0}.dropdown,.settings,.sidebar-list{list-style:none;margin:0}.sidebar-list{padding:0}.dropdown li{margin:32px 0;padding:0 0 0 32px}.dropdown li,.settings li{line-height:1}.sidebar-list li{line-height:1;margin:32px 0;padding:0 0 0 32px}.dropdown a{color:#D0D6E2}.dropdown a,.settings a,.sidebar-list a{display:block;text-transform:none}.sidebar-list a{color:#D0D6E2}.dropdown a:after,.settings a:after,.sidebar-list a:after{content:"";display:table;clear:both}.dropdown .icon,.settings .icon,.sidebar-list .icon{float:right}.open .dropdown,.open .settings,.open .sidebar-list{display:block}.open .dropdown.collapse,.open .collapse.settings,.open .sidebar-list.collapse{display:none}.open .dropdown.collapse.in,.open .collapse.in.settings,.open .sidebar-list.collapse.in{display:block}.dropdown .unlinked .icon,.settings .unlinked .icon,.sidebar-list .unlinked .icon{opacity:.3}.dropdown.documents li,.documents.settings li,.sidebar-list.documents li{background-image:url("../img/icons/file.svg");background-position:240px center;background-repeat:no-repeat;background-size:14px 16px;padding:3px 32px}.dropdown.documents li.octocat,.documents.settings li.octocat,.sidebar-list.documents li.octocat{background-image:url("../img/icons/octocat.svg");background-position:234px center;background-size:24px 24px}.dropdown.documents li:last-child,.documents.settings li:last-child,.sidebar-list.documents li:last-child{margin-bottom:1rem}.dropdown.documents li.active a,.documents.settings li.active a,.sidebar-list.documents li.active a{color:#35D7BB}.settings{position:fixed;top:67px;right:16px;border-radius:3px;width:288px;background-color:#373D49;padding:16px;z-index:7}.show-settings .settings{display:block}.settings .has-checkbox{float:left}.settings a{font-size:1.25rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;line-height:28px;color:#D0D6E2}.settings a:after{content:"";display:table;clear:both}.settings a:hover{color:#35D7BB}.settings li{border-bottom:1px solid #4F535B;margin:0;padding:16px 0}.settings li:last-child{border-bottom:none}.brand{border:none;display:block}.brand:hover g{fill:#35D7BB}.toggle{display:block;float:left;height:16px;padding:25px 16px 26px;width:40px}.toggle span:after,.toggle span:before{content:'';left:0;position:absolute;top:-6px}.toggle span:after{top:6px}.toggle span{display:block;position:relative}.toggle span,.toggle span:after,.toggle span:before{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:#D3DAEA;height:2px;-webkit-transition:all .3s;transition:all .3s;width:20px}.open-menu .toggle span{background-color:transparent}.open-menu .toggle span:before{-webkit-transform:rotate(45deg) translate(3px,3px);transform:rotate(45deg) translate(3px,3px)}.open-menu .toggle span:after{-webkit-transform:rotate(-45deg) translate(5px,-6px);transform:rotate(-45deg) translate(5px,-6px)}.caret{display:inline-block;width:0;height:0;margin-left:6px;vertical-align:middle;position:relative;top:-1px;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.sidebar{overflow:auto;height:100%;padding-right:15px;padding-bottom:15px;width:285px}.sidebar-wrapper{-webkit-overflow-scrolling:touch;background-color:#2B2F36;left:0;height:100%;overflow-y:hidden;position:fixed;top:0;width:285px;z-index:1}.sidebar-branding{width:160px;padding:0;margin:16px auto}.header{border-bottom:1px solid #E8E8E8;position:relative}.words{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;color:#A0AABF;letter-spacing:1px;text-transform:uppercase;z-index:5;position:absolute;right:16px;top:0}.words span{color:#000}.btn{text-align:center;display:inline-block;width:100%;text-transform:uppercase;font-weight:600;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;text-shadow:0 1px 0 #1b8b77;padding:16px 24px;background-color:#35D7BB;border-radius:3px;margin:0 auto 16px;line-height:1;color:#fff;-webkit-transition:all .15s linear;transition:all .15s linear;-webkit-font-smoothing:antialiased}.btn--new,.btn--save{display:block;width:238px}.btn--new:hover,.btn--new:focus,.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 3px #24b59c;text-shadow:0 1px 0 #24b59c}.btn--save{background-color:#4A5261;text-shadow:0 1px 1px #1e2127}.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 5px #08090a;text-shadow:none}.btn--delete{display:block;width:238px;background-color:transparent;font-size:12px;text-shadow:none}.btn--delete:hover,.btn--delete:focus{color:#fff;border-bottom-color:transparent;text-shadow:0 1px 0 #08090a;opacity:.8}.btn--delete-modal,.btn--ok,.btn--close{border-top:0;background-color:#4A5261;text-shadow:0 1px 0 #08090a;margin:0}.btn--delete-modal:hover,.btn--delete-modal:focus,.btn--ok:hover,.btn--ok:focus,.btn--close:hover,.btn--close:focus{color:#fff;background-color:#292d36;text-shadow:none}.btn--delete-modal{display:inline;width:auto}.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(55,61,73,.8);-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;will-change:left,opacity,visibility;z-index:5;opacity:0;visibility:hidden}.show-settings .overlay{visibility:visible;opacity:1}.switch{float:right;line-height:1}.switch input{display:none}.switch small{display:inline-block;cursor:pointer;padding:0 24px 0 0;-webkit-transition:all ease .2s;transition:all ease .2s;background-color:#2B2F36;border-color:#2B2F36}.switch small,.switch small:before{border-radius:30px;box-shadow:inset 0 0 2px 0 #14171F}.switch small:before{display:block;content:'';width:28px;height:28px;background:#fff}.switch.checked small{padding-right:0;padding-left:24px;background-color:#35D7BB;box-shadow:none}.modal--dillinger.about .modal-dialog{font-size:1.25rem;max-width:500px}.modal--dillinger.scope .modal-dialog{max-width:300px;margin:5rem auto}.modal--dillinger .modal-dialog{max-width:600px;width:auto;margin:5rem auto}.modal--dillinger .modal-content{background:#373D49;border-radius:3px;box-shadow:0 2px 5px 0 #2C3B59;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;padding:2rem}.modal--dillinger ul{list-style-type:disc;margin:1rem 0;padding:0 0 0 1rem}.modal--dillinger li{padding:0;margin:0}.modal--dillinger .modal-header{border:0;padding:0}.modal--dillinger .modal-body{padding:0}.modal--dillinger .modal-footer{border:0;padding:0}.modal--dillinger .close{color:#fff;opacity:1}.modal-backdrop{background-color:#373D49}.pagination--dillinger{padding:0!important;margin:1.5rem 0!important;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:stretch;align-content:stretch}.pagination--dillinger,.pagination--dillinger li{display:-webkit-box;display:-ms-flexbox;display:flex}.pagination--dillinger li{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-align:center}.pagination--dillinger li:first-child>a,.pagination--dillinger li.disabled>a,.pagination--dillinger li.disabled>a:hover,.pagination--dillinger li.disabled>a:focus,.pagination--dillinger li>a{background-color:transparent;border-color:#4F535B;border-right-color:transparent}.pagination--dillinger li.active>a,.pagination--dillinger li.active>a:hover,.pagination--dillinger li.active>a:focus{border-color:#4A5261;background-color:#4A5261;color:#fff}.pagination--dillinger li>a{float:none;color:#fff;width:100%;display:block;text-align:center;margin:0;border-right-color:transparent;padding:6px}.pagination--dillinger li>a:hover,.pagination--dillinger li>a:focus{border-color:#35D7BB;background-color:#35D7BB;color:#fff}.pagination--dillinger li:last-child a{border-color:#4F535B}.pagination--dillinger li:first-child a{border-right-color:transparent}.diNotify{position:absolute;z-index:9999;left:0;right:0;top:0;margin:0 auto;max-width:400px;text-align:center;-webkit-transition:top .5s ease-in-out,opacity .5s ease-in-out;transition:top .5s ease-in-out,opacity .5s ease-in-out;visibility:hidden}.diNotify-body{-webkit-font-smoothing:antialiased;background-color:#35D7BB;background:#666E7F;border-radius:3px;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;overflow:hidden;padding:1rem 2rem .5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.diNotify-icon{display:block;width:16px;height:16px;line-height:16px;position:relative;top:3px}.diNotify-message{padding-left:1rem}.zen-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:10;background-color:#FFF;opacity:0;-webkit-transition:opacity .25s ease-in-out;transition:opacity .25s ease-in-out}.zen-wrapper.on{opacity:1}.enter-zen-mode{background-image:url("../img/icons/enter-zen.svg");right:.5rem;top:.313rem;display:none}.enter-zen-mode,.close-zen-mode{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;background-repeat:no-repeat;width:32px;height:32px;display:block;position:absolute}.close-zen-mode{background-image:url("../img/icons/exit-zen.svg");right:1rem;top:1rem}.zen-page{position:relative;top:0;bottom:0;z-index:11;height:100%;width:100%}#zen{font-size:1.25rem;width:300px;height:80%;margin:0 auto;position:relative;top:10%}#zen:before,#zen:after{content:"";position:absolute;height:10%;width:100%;z-index:12;pointer-events:none}#preview .table{width:auto}.ui-resizable{position:relative}.ui-resizable-handle{position:absolute;font-size:.1px;z-index:99999;display:block}.ui-resizable-e{background-color:#666;border-right:8px solid #e8e8e8;border-left:1px solid #222;width:10px;z-index:88!important;position:relative}.ui-resizable-e:after{content:"-";display:block;position:absolute;top:calc(50% - 16px);left:0;height:25px;width:2px;background-color:rgba(0,0,0,.4);margin:3px}#editor{cursor:ew-resize;position:relative;z-index:auto}.profile-pic{float:left;width:250px}.ad-container a::before{color:#A0AABF;content:"Ad:  "}.ad-container{display:block;float:left;max-width:38%;word-wrap:break-word}.ad-container a{display:block;font-size:.75rem;height:51px;letter-spacing:1px;line-height:1rem;padding:18px 24px}.ad-container img{display:none}.split{overflow:scroll;padding:0!important}.split-editor{padding-left:0;padding-right:0;position:relative;z-index:3}.show-preview .split-editor{display:none}.split-preview{background-color:#fff;display:none;top:0;position:relative;z-index:4}.show-preview .split-preview{display:block}#editor{font-size:1rem;font-family:"Ubuntu Mono",Monaco;font-weight:400;line-height:2rem;width:100%;height:100%}#editor .ace_gutter{-webkit-font-smoothing:antialiased}.editor-header{width:50%;float:left;border-bottom:1px solid #E8E8E8;position:relative}.editor-header--first{border-right:1px solid #E8E8E8}.editor-header .title{display:inline-block}#preview{padding:15px}#preview a{color:#A0AABF;text-decoration:underline}.sr-only{visibility:hidden;text-overflow:110%;overflow:hidden;top:-100px;position:absolute}.mnone{margin:0!important}@media screen and (min-width:27.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--m1of1{width:100%}.g-b--m1of2,.g-b--m2of4,.g-b--m3of6,.g-b--m4of8,.g-b--m5of10,.g-b--m6of12{width:50%}.g-b--m1of3,.g-b--m2of6,.g-b--m4of12{width:33.333%}.g-b--m2of3,.g-b--m4of6,.g-b--m8of12{width:66.666%}.g-b--m1of4,.g-b--m2of8,.g-b--m3of12{width:25%}.g-b--m3of4,.g-b--m6of8,.g-b--m9of12{width:75%}.g-b--m1of5,.g-b--m2of10{width:20%}.g-b--m2of5,.g-b--m4of10{width:40%}.g-b--m3of5,.g-b--m6of10{width:60%}.g-b--m4of5,.g-b--m8of10{width:80%}.g-b--m1of6,.g-b--m2of12{width:16.666%}.g-b--m5of6,.g-b--m10of12{width:83.333%}.g-b--m1of8{width:12.5%}.g-b--m3of8{width:37.5%}.g-b--m5of8{width:62.5%}.g-b--m7of8{width:87.5%}.g-b--m1of10{width:10%}.g-b--m3of10{width:30%}.g-b--m7of10{width:70%}.g-b--m9of10{width:90%}.g-b--m1of12{width:8.333%}.g-b--m5of12{width:41.666%}.g-b--m7of12{width:58.333%}.g-b--m11of12{width:91.666%}.g-b--push--m1of1{margin-left:100%}.g-b--push--m1of2,.g-b--push--m2of4,.g-b--push--m3of6,.g-b--push--m4of8,.g-b--push--m5of10,.g-b--push--m6of12{margin-left:50%}.g-b--push--m1of3,.g-b--push--m2of6,.g-b--push--m4of12{margin-left:33.333%}.g-b--push--m2of3,.g-b--push--m4of6,.g-b--push--m8of12{margin-left:66.666%}.g-b--push--m1of4,.g-b--push--m2of8,.g-b--push--m3of12{margin-left:25%}.g-b--push--m3of4,.g-b--push--m6of8,.g-b--push--m9of12{margin-left:75%}.g-b--push--m1of5,.g-b--push--m2of10{margin-left:20%}.g-b--push--m2of5,.g-b--push--m4of10{margin-left:40%}.g-b--push--m3of5,.g-b--push--m6of10{margin-left:60%}.g-b--push--m4of5,.g-b--push--m8of10{margin-left:80%}.g-b--push--m1of6,.g-b--push--m2of12{margin-left:16.666%}.g-b--push--m5of6,.g-b--push--m10of12{margin-left:83.333%}.g-b--push--m1of8{margin-left:12.5%}.g-b--push--m3of8{margin-left:37.5%}.g-b--push--m5of8{margin-left:62.5%}.g-b--push--m7of8{margin-left:87.5%}.g-b--push--m1of10{margin-left:10%}.g-b--push--m3of10{margin-left:30%}.g-b--push--m7of10{margin-left:70%}.g-b--push--m9of10{margin-left:90%}.g-b--push--m1of12{margin-left:8.333%}.g-b--push--m5of12{margin-left:41.666%}.g-b--push--m7of12{margin-left:58.333%}.g-b--push--m11of12{margin-left:91.666%}.g-b--pull--m1of1{margin-right:100%}.g-b--pull--m1of2,.g-b--pull--m2of4,.g-b--pull--m3of6,.g-b--pull--m4of8,.g-b--pull--m5of10,.g-b--pull--m6of12{margin-right:50%}.g-b--pull--m1of3,.g-b--pull--m2of6,.g-b--pull--m4of12{margin-right:33.333%}.g-b--pull--m2of3,.g-b--pull--m4of6,.g-b--pull--m8of12{margin-right:66.666%}.g-b--pull--m1of4,.g-b--pull--m2of8,.g-b--pull--m3of12{margin-right:25%}.g-b--pull--m3of4,.g-b--pull--m6of8,.g-b--pull--m9of12{margin-right:75%}.g-b--pull--m1of5,.g-b--pull--m2of10{margin-right:20%}.g-b--pull--m2of5,.g-b--pull--m4of10{margin-right:40%}.g-b--pull--m3of5,.g-b--pull--m6of10{margin-right:60%}.g-b--pull--m4of5,.g-b--pull--m8of10{margin-right:80%}.g-b--pull--m1of6,.g-b--pull--m2of12{margin-right:16.666%}.g-b--pull--m5of6,.g-b--pull--m10of12{margin-right:83.333%}.g-b--pull--m1of8{margin-right:12.5%}.g-b--pull--m3of8{margin-right:37.5%}.g-b--pull--m5of8{margin-right:62.5%}.g-b--pull--m7of8{margin-right:87.5%}.g-b--pull--m1of10{margin-right:10%}.g-b--pull--m3of10{margin-right:30%}.g-b--pull--m7of10{margin-right:70%}.g-b--pull--m9of10{margin-right:90%}.g-b--pull--m1of12{margin-right:8.333%}.g-b--pull--m5of12{margin-right:41.666%}.g-b--pull--m7of12{margin-right:58.333%}.g-b--pull--m11of12{margin-right:91.666%}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:400px}#editor{font-size:1rem}}@media screen and (min-width:46.25em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--t1of1{width:100%}.g-b--t1of2,.g-b--t2of4,.g-b--t3of6,.g-b--t4of8,.g-b--t5of10,.g-b--t6of12{width:50%}.g-b--t1of3,.g-b--t2of6,.g-b--t4of12{width:33.333%}.g-b--t2of3,.g-b--t4of6,.g-b--t8of12{width:66.666%}.g-b--t1of4,.g-b--t2of8,.g-b--t3of12{width:25%}.g-b--t3of4,.g-b--t6of8,.g-b--t9of12{width:75%}.g-b--t1of5,.g-b--t2of10{width:20%}.g-b--t2of5,.g-b--t4of10{width:40%}.g-b--t3of5,.g-b--t6of10{width:60%}.g-b--t4of5,.g-b--t8of10{width:80%}.g-b--t1of6,.g-b--t2of12{width:16.666%}.g-b--t5of6,.g-b--t10of12{width:83.333%}.g-b--t1of8{width:12.5%}.g-b--t3of8{width:37.5%}.g-b--t5of8{width:62.5%}.g-b--t7of8{width:87.5%}.g-b--t1of10{width:10%}.g-b--t3of10{width:30%}.g-b--t7of10{width:70%}.g-b--t9of10{width:90%}.g-b--t1of12{width:8.333%}.g-b--t5of12{width:41.666%}.g-b--t7of12{width:58.333%}.g-b--t11of12{width:91.666%}.g-b--push--t1of1{margin-left:100%}.g-b--push--t1of2,.g-b--push--t2of4,.g-b--push--t3of6,.g-b--push--t4of8,.g-b--push--t5of10,.g-b--push--t6of12{margin-left:50%}.g-b--push--t1of3,.g-b--push--t2of6,.g-b--push--t4of12{margin-left:33.333%}.g-b--push--t2of3,.g-b--push--t4of6,.g-b--push--t8of12{margin-left:66.666%}.g-b--push--t1of4,.g-b--push--t2of8,.g-b--push--t3of12{margin-left:25%}.g-b--push--t3of4,.g-b--push--t6of8,.g-b--push--t9of12{margin-left:75%}.g-b--push--t1of5,.g-b--push--t2of10{margin-left:20%}.g-b--push--t2of5,.g-b--push--t4of10{margin-left:40%}.g-b--push--t3of5,.g-b--push--t6of10{margin-left:60%}.g-b--push--t4of5,.g-b--push--t8of10{margin-left:80%}.g-b--push--t1of6,.g-b--push--t2of12{margin-left:16.666%}.g-b--push--t5of6,.g-b--push--t10of12{margin-left:83.333%}.g-b--push--t1of8{margin-left:12.5%}.g-b--push--t3of8{margin-left:37.5%}.g-b--push--t5of8{margin-left:62.5%}.g-b--push--t7of8{margin-left:87.5%}.g-b--push--t1of10{margin-left:10%}.g-b--push--t3of10{margin-left:30%}.g-b--push--t7of10{margin-left:70%}.g-b--push--t9of10{margin-left:90%}.g-b--push--t1of12{margin-left:8.333%}.g-b--push--t5of12{margin-left:41.666%}.g-b--push--t7of12{margin-left:58.333%}.g-b--push--t11of12{margin-left:91.666%}.g-b--pull--t1of1{margin-right:100%}.g-b--pull--t1of2,.g-b--pull--t2of4,.g-b--pull--t3of6,.g-b--pull--t4of8,.g-b--pull--t5of10,.g-b--pull--t6of12{margin-right:50%}.g-b--pull--t1of3,.g-b--pull--t2of6,.g-b--pull--t4of12{margin-right:33.333%}.g-b--pull--t2of3,.g-b--pull--t4of6,.g-b--pull--t8of12{margin-right:66.666%}.g-b--pull--t1of4,.g-b--pull--t2of8,.g-b--pull--t3of12{margin-right:25%}.g-b--pull--t3of4,.g-b--pull--t6of8,.g-b--pull--t9of12{margin-right:75%}.g-b--pull--t1of5,.g-b--pull--t2of10{margin-right:20%}.g-b--pull--t2of5,.g-b--pull--t4of10{margin-right:40%}.g-b--pull--t3of5,.g-b--pull--t6of10{margin-right:60%}.g-b--pull--t4of5,.g-b--pull--t8of10{margin-right:80%}.g-b--pull--t1of6,.g-b--pull--t2of12{margin-right:16.666%}.g-b--pull--t5of6,.g-b--pull--t10of12{margin-right:83.333%}.g-b--pull--t1of8{margin-right:12.5%}.g-b--pull--t3of8{margin-right:37.5%}.g-b--pull--t5of8{margin-right:62.5%}.g-b--pull--t7of8{margin-right:87.5%}.g-b--pull--t1of10{margin-right:10%}.g-b--pull--t3of10{margin-right:30%}.g-b--pull--t7of10{margin-right:70%}.g-b--pull--t9of10{margin-right:90%}.g-b--pull--t1of12{margin-right:8.333%}.g-b--pull--t5of12{margin-right:41.666%}.g-b--pull--t7of12{margin-right:58.333%}.g-b--pull--t11of12{margin-right:91.666%}.splashscreen-dillinger{width:500px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--save-to,.menu .menu-item--import-from{display:block}.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar{display:none}.settings a{font-size:1.25rem}.words{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog{font-size:1.25rem}.enter-zen-mode{display:block}.close-zen-mode{right:3rem;top:3rem}#zen{font-size:1.25rem;width:500px}.split-editor{border-right:1px solid #E8E8E8;float:left;height:calc(100vh - 172px);-webkit-overflow-scrolling:touch;padding-right:16px;width:50%}.show-preview .split-editor{display:block}.split-preview{display:block;float:right;height:calc(100vh - 172px);-webkit-overflow-scrolling:touch;position:relative;top:0;width:50%}#editor{font-size:1rem}}@media screen and (min-width:62.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--d1of1{width:100%}.g-b--d1of2,.g-b--d2of4,.g-b--d3of6,.g-b--d4of8,.g-b--d5of10,.g-b--d6of12{width:50%}.g-b--d1of3,.g-b--d2of6,.g-b--d4of12{width:33.333%}.g-b--d2of3,.g-b--d4of6,.g-b--d8of12{width:66.666%}.g-b--d1of4,.g-b--d2of8,.g-b--d3of12{width:25%}.g-b--d3of4,.g-b--d6of8,.g-b--d9of12{width:75%}.g-b--d1of5,.g-b--d2of10{width:20%}.g-b--d2of5,.g-b--d4of10{width:40%}.g-b--d3of5,.g-b--d6of10{width:60%}.g-b--d4of5,.g-b--d8of10{width:80%}.g-b--d1of6,.g-b--d2of12{width:16.666%}.g-b--d5of6,.g-b--d10of12{width:83.333%}.g-b--d1of8{width:12.5%}.g-b--d3of8{width:37.5%}.g-b--d5of8{width:62.5%}.g-b--d7of8{width:87.5%}.g-b--d1of10{width:10%}.g-b--d3of10{width:30%}.g-b--d7of10{width:70%}.g-b--d9of10{width:90%}.g-b--d1of12{width:8.333%}.g-b--d5of12{width:41.666%}.g-b--d7of12{width:58.333%}.g-b--d11of12{width:91.666%}.g-b--push--d1of1{margin-left:100%}.g-b--push--d1of2,.g-b--push--d2of4,.g-b--push--d3of6,.g-b--push--d4of8,.g-b--push--d5of10,.g-b--push--d6of12{margin-left:50%}.g-b--push--d1of3,.g-b--push--d2of6,.g-b--push--d4of12{margin-left:33.333%}.g-b--push--d2of3,.g-b--push--d4of6,.g-b--push--d8of12{margin-left:66.666%}.g-b--push--d1of4,.g-b--push--d2of8,.g-b--push--d3of12{margin-left:25%}.g-b--push--d3of4,.g-b--push--d6of8,.g-b--push--d9of12{margin-left:75%}.g-b--push--d1of5,.g-b--push--d2of10{margin-left:20%}.g-b--push--d2of5,.g-b--push--d4of10{margin-left:40%}.g-b--push--d3of5,.g-b--push--d6of10{margin-left:60%}.g-b--push--d4of5,.g-b--push--d8of10{margin-left:80%}.g-b--push--d1of6,.g-b--push--d2of12{margin-left:16.666%}.g-b--push--d5of6,.g-b--push--d10of12{margin-left:83.333%}.g-b--push--d1of8{margin-left:12.5%}.g-b--push--d3of8{margin-left:37.5%}.g-b--push--d5of8{margin-left:62.5%}.g-b--push--d7of8{margin-left:87.5%}.g-b--push--d1of10{margin-left:10%}.g-b--push--d3of10{margin-left:30%}.g-b--push--d7of10{margin-left:70%}.g-b--push--d9of10{margin-left:90%}.g-b--push--d1of12{margin-left:8.333%}.g-b--push--d5of12{margin-left:41.666%}.g-b--push--d7of12{margin-left:58.333%}.g-b--push--d11of12{margin-left:91.666%}.g-b--pull--d1of1{margin-right:100%}.g-b--pull--d1of2,.g-b--pull--d2of4,.g-b--pull--d3of6,.g-b--pull--d4of8,.g-b--pull--d5of10,.g-b--pull--d6of12{margin-right:50%}.g-b--pull--d1of3,.g-b--pull--d2of6,.g-b--pull--d4of12{margin-right:33.333%}.g-b--pull--d2of3,.g-b--pull--d4of6,.g-b--pull--d8of12{margin-right:66.666%}.g-b--pull--d1of4,.g-b--pull--d2of8,.g-b--pull--d3of12{margin-right:25%}.g-b--pull--d3of4,.g-b--pull--d6of8,.g-b--pull--d9of12{margin-right:75%}.g-b--pull--d1of5,.g-b--pull--d2of10{margin-right:20%}.g-b--pull--d2of5,.g-b--pull--d4of10{margin-right:40%}.g-b--pull--d3of5,.g-b--pull--d6of10{margin-right:60%}.g-b--pull--d4of5,.g-b--pull--d8of10{margin-right:80%}.g-b--pull--d1of6,.g-b--pull--d2of12{margin-right:16.666%}.g-b--pull--d5of6,.g-b--pull--d10of12{margin-right:83.333%}.g-b--pull--d1of8{margin-right:12.5%}.g-b--pull--d3of8{margin-right:37.5%}.g-b--pull--d5of8{margin-right:62.5%}.g-b--pull--d7of8{margin-right:87.5%}.g-b--pull--d1of10{margin-right:10%}.g-b--pull--d3of10{margin-right:30%}.g-b--pull--d7of10{margin-right:70%}.g-b--pull--d9of10{margin-right:90%}.g-b--pull--d1of12{margin-right:8.333%}.g-b--pull--d5of12{margin-right:41.666%}.g-b--pull--d7of12{margin-right:58.333%}.g-b--pull--d11of12{margin-right:91.666%}.splashscreen-dillinger{width:700px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--export-as{display:block}.menu .menu-item--preview{display:none}.settings a{font-size:1.25rem}.words{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:700px}#editor{font-size:1rem}}@media screen and (min-width:87.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.splashscreen-dillinger{width:800px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#editor{font-size:1rem}}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .input-group{display:inline-table;vertical-align:middle}.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn,.form-inline .input-group .form-control{width:auto}.form-inline .input-group>.form-control{width:100%}.form-inline .control-label{margin-bottom:0;vertical-align:middle}.form-inline .radio,.form-inline .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.form-inline .radio label,.form-inline .checkbox label{padding-left:0}.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{position:relative;margin-left:0}.form-inline .has-feedback .form-control-feedback{top:0}.form-horizontal .control-label{text-align:right;margin-bottom:0;padding-top:7px}.form-horizontal .form-group-lg .control-label{padding-top:14.3px}.form-horizontal .form-group-sm .control-label{padding-top:6px}.modal-dialog{width:600px;margin:30px auto}.modal-content{box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}@media screen and (max-width:1200px){.ad-container{max-width:30%}.ad-container a{font-size:.825rem;line-height:.875rem;padding:12px 12px 6px 24px;text-align:justify}}@media screen and (max-width:1100px){.ad-container{max-width:27%}.ad-container a{font-size:.8rem;line-height:.85rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:1000px){.ad-container{max-width:24%}.ad-container a{font-size:.775rem;line-height:.8rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:900px){.ad-container{max-width:30%}}@media screen and (max-width:767px){.table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;overflow-x:auto;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd;-webkit-overflow-scrolling:touch}.table-responsive>.table{margin-bottom:0}.table-responsive>.table>thead>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>tfoot>tr>td{white-space:nowrap}.table-responsive>.table-bordered{border:0}.table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0}.table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0}.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td{border-bottom:0}}@media screen and (max-width:720px){.ad-container{max-width:50%}.ad-container a{font-size:.75rem;line-height:1rem;padding:12px 24px}}@media screen and (max-width:620px){.ad-container{max-width:40%}.ad-container a{font-size:.66rem;letter-spacing:1px;line-height:1rem;padding:6px 24px}}@media screen and (max-width:520px){.ad-container a{font-size:.4rem;line-height:.875rem;padding:6px 12px 6px 24px;text-align:justify}}@media screen and (max-width:460px){.ad-container{display:none}}@media screen and (max-width:46.1875em){.editor-header{display:none}.editor-header--first{display:block;width:100%}}</style></head><body id="preview">
+<h1><a id="Run_Multiple_gps_mainpy_with_UR_Robot_Agent_in_Gazebo_0"></a>Run Multiple gps_main.py with UR Robot Agent in Gazebo</h1>
+<h2><a id="Table_of_Contents_2"></a>Table of Contents</h2>
+<ul>
+<li>Possible Errors</li>
+<li>Create Multiple UR Robots in Gazebo
+<ul>
+<li>ur10_robot.urdf.xacro</li>
+<li>arm_controller_ur10.yaml</li>
+<li>ur10.launch</li>
+</ul>
+</li>
+<li>Modify GPS Agent for Running Multiple UR Agent Nodes
+<ul>
+<li>Example of <code>hyperparams.py</code></li>
+<li>Example of <code>agent_ur.py</code></li>
+</ul>
+</li>
+</ul>
+<h2><a id="Possible_Errors_14"></a>Possible Errors</h2>
+<p><code>Error 1</code>: cannot run gps with tensorflow, but can debug it.<br>
+<code>Solution</code>: add <code>export LD_PRELOAD=&quot;/usr/lib/libtcmalloc.so.4&quot;</code> to your ~/.bashrc</p>
+<h2><a id="Create_Multiple_UR_Robots_in_Gazebo_19"></a>Create Multiple UR Robots in Gazebo</h2>
+<p>Take UR10 as an example, and we are gonna add two UR10 robots in Gazebo:</p>
+<p>Modify three files: <code>ur10_robot.urdf.xacro</code>, <code>arm_controller_ur10.yaml</code>, <code>ur10.launch</code></p>
+<h3><a id="ur10_roboturdfxacro_25"></a>ur10_robot.urdf.xacro</h3>
+<pre><code class="language-bash">roscd ur_description
+<span class="hljs-built_in">cd</span> urdf
+</code></pre>
+<p>Edit <code>ur10_robot.urdf.xacro</code> to be like these:</p>
+<pre><code class="language-xml"><span class="hljs-pi">&lt;?xml version="1.0"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">robot</span> <span class="hljs-attribute">xmlns:xacro</span>=<span class="hljs-value">"http://ros.org/wiki/xacro"</span>
+       <span class="hljs-attribute">name</span>=<span class="hljs-value">"ur10"</span> &gt;</span>
+
+  <span class="hljs-comment">&lt;!-- common stuff --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">xacro:include</span> <span class="hljs-attribute">filename</span>=<span class="hljs-value">"$(find ur_description)/urdf/common.gazebo.xacro"</span> /&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- ur10 --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">xacro:include</span> <span class="hljs-attribute">filename</span>=<span class="hljs-value">"$(find ur_description)/urdf/ur10.urdf.xacro"</span> /&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- arm --&gt;</span>
+  <span class="hljs-comment">&lt;!-- &lt;xacro:ur10_robot prefix="" joint_limited="false"/&gt; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">xacro:ur10_robot</span> <span class="hljs-attribute">prefix</span>=<span class="hljs-value">"ur0_"</span> <span class="hljs-attribute">joint_limited</span>=<span class="hljs-value">"false"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">xacro:ur10_robot</span> <span class="hljs-attribute">prefix</span>=<span class="hljs-value">"ur1_"</span> <span class="hljs-attribute">joint_limited</span>=<span class="hljs-value">"false"</span>/&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"world"</span> /&gt;</span>
+<span class="hljs-comment">&lt;!--   &lt;joint name="world_joint" type="fixed"&gt;
+    &lt;parent link="world" /&gt;
+    &lt;child link = "base_link" /&gt;
+    &lt;origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /&gt;
+  &lt;/joint&gt; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">joint</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"world_joint_0"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"fixed"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">parent</span> <span class="hljs-attribute">link</span>=<span class="hljs-value">"world"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">child</span> <span class="hljs-attribute">link</span> = "<span class="hljs-attribute">ur0_base_link</span>" /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">origin</span> <span class="hljs-attribute">xyz</span>=<span class="hljs-value">"0.0 0.0 0.0"</span> <span class="hljs-attribute">rpy</span>=<span class="hljs-value">"0.0 0.0 0.0"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">joint</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">joint</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"world_joint_1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"fixed"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">parent</span> <span class="hljs-attribute">link</span>=<span class="hljs-value">"world"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">child</span> <span class="hljs-attribute">link</span> = "<span class="hljs-attribute">ur1_base_link</span>" /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">origin</span> <span class="hljs-attribute">xyz</span>=<span class="hljs-value">"3.0 3.0 0.0"</span> <span class="hljs-attribute">rpy</span>=<span class="hljs-value">"0.0 0.0 0.0"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">joint</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">robot</span>&gt;</span>
+</code></pre>
+<p>Then run:</p>
+<pre><code class="language-bash">rosrun xacro xacro.py -o ur10_robot.urdf ur10_robot.urdf.xacro 
+</code></pre>
+<h3><a id="arm_controller_ur10yaml_74"></a>arm_controller_ur10.yaml</h3>
+<pre><code class="language-bash">roscd ur_gazebo
+<span class="hljs-built_in">cd</span> controller
+</code></pre>
+<p>Edit <code>arm_controller_ur10.yaml</code> to be like these:</p>
+<pre><code class="language-yaml"># arm_controller:
+#   type: position_controllers/JointTrajectoryController
+#   joints:
+#      - shoulder_pan_joint
+#      - shoulder_lift_joint
+#      - elbow_joint
+#      - wrist_1_joint
+#      - wrist_2_joint
+#      - wrist_3_joint
+#   constraints:
+#       goal_time: 0.6
+#       stopped_velocity_tolerance: 0.05
+#       shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
+#       shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
+#       elbow_joint: {trajectory: 0.1, goal: 0.1}
+#       wrist_1_joint: {trajectory: 0.1, goal: 0.1}
+#       wrist_2_joint: {trajectory: 0.1, goal: 0.1}
+#       wrist_3_joint: {trajectory: 0.1, goal: 0.1}
+#   stop_trajectory_duration: 0.5
+#   state_publish_rate:  25
+#   action_monitor_rate: 10
+
+arm_controller_ur0:
+  type: position_controllers/JointTrajectoryController
+  joints:
+     - ur0_shoulder_pan_joint
+     - ur0_shoulder_lift_joint
+     - ur0_elbow_joint
+     - ur0_wrist_1_joint
+     - ur0_wrist_2_joint
+     - ur0_wrist_3_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      ur0_shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
+      ur0_shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
+      ur0_elbow_joint: {trajectory: 0.1, goal: 0.1}
+      ur0_wrist_1_joint: {trajectory: 0.1, goal: 0.1}
+      ur0_wrist_2_joint: {trajectory: 0.1, goal: 0.1}
+      ur0_wrist_3_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  100
+  action_monitor_rate: 50
+
+arm_controller_ur1:
+  type: position_controllers/JointTrajectoryController
+  joints:
+     - ur1_shoulder_pan_joint
+     - ur1_shoulder_lift_joint
+     - ur1_elbow_joint
+     - ur1_wrist_1_joint
+     - ur1_wrist_2_joint
+     - ur1_wrist_3_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      ur1_shoulder_pan_joint: {trajectory: 0.1, goal: 0.1}
+      ur1_shoulder_lift_joint: {trajectory: 0.1, goal: 0.1}
+      ur1_elbow_joint: {trajectory: 0.1, goal: 0.1}
+      ur1_wrist_1_joint: {trajectory: 0.1, goal: 0.1}
+      ur1_wrist_2_joint: {trajectory: 0.1, goal: 0.1}
+      ur1_wrist_3_joint: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  100
+  action_monitor_rate: 50
+</code></pre>
+<h3><a id="ur10launch_151"></a>ur10.launch</h3>
+<pre><code class="language-bash">roscd ur_gazebo
+<span class="hljs-built_in">cd</span> launch
+</code></pre>
+<p>Edit <code>ur10.launch</code> to be like these:</p>
+<pre><code class="language-xml"><span class="hljs-pi">&lt;?xml version="1.0"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">launch</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"limited"</span> <span class="hljs-attribute">default</span>=<span class="hljs-value">"false"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"paused"</span> <span class="hljs-attribute">default</span>=<span class="hljs-value">"false"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gui"</span> <span class="hljs-attribute">default</span>=<span class="hljs-value">"true"</span>/&gt;</span>
+  
+  <span class="hljs-comment">&lt;!-- startup simulated world --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">include</span> <span class="hljs-attribute">file</span>=<span class="hljs-value">"$(find gazebo_ros)/launch/empty_world.launch"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"world_name"</span> <span class="hljs-attribute">default</span>=<span class="hljs-value">"worlds/empty.world"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"paused"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"$(arg paused)"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gui"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"$(arg gui)"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- send robot urdf to param server --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">include</span> <span class="hljs-attribute">file</span>=<span class="hljs-value">"$(find ur_description)/launch/ur10_upload.launch"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">arg</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"limited"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"$(arg limited)"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- push robot_description to factory and spawn robot in gazebo --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">node</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"spawn_gazebo_model"</span> <span class="hljs-attribute">pkg</span>=<span class="hljs-value">"gazebo_ros"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"spawn_model"</span> <span class="hljs-attribute">args</span>=<span class="hljs-value">"-urdf -param robot_description -model robot -z 3.0"</span> <span class="hljs-attribute">respawn</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">output</span>=<span class="hljs-value">"screen"</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">include</span> <span class="hljs-attribute">file</span>=<span class="hljs-value">"$(find ur_gazebo)/launch/controller_utils.launch"</span>/&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">rosparam</span> <span class="hljs-attribute">file</span>=<span class="hljs-value">"$(find ur_gazebo)/controller/arm_controller_ur10.yaml"</span> <span class="hljs-attribute">command</span>=<span class="hljs-value">"load"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">node</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"arm_controller_spawner"</span> <span class="hljs-attribute">pkg</span>=<span class="hljs-value">"controller_manager"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"controller_manager"</span> <span class="hljs-attribute">args</span>=<span class="hljs-value">"spawn arm_controller_ur0 arm_controller_ur1"</span> <span class="hljs-attribute">respawn</span>=<span class="hljs-value">"false"</span> <span class="hljs-attribute">output</span>=<span class="hljs-value">"screen"</span>/&gt;</span>
+  <span class="hljs-comment">&lt;!-- &lt;node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/&gt; --&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">launch</span>&gt;</span>
+</code></pre>
+<p>You are almost done here, just run:</p>
+<pre><code class="language-bash">roslaunch ur_gazebo  ur10.launch 
+</code></pre>
+<p>You can also change the <code>/tf</code> frequency in <code>controller_utils.launch</code></p>
+<pre><code class="language-bash">roscd ur_gazebo
+<span class="hljs-built_in">cd</span> launch
+</code></pre>
+<h2><a id="Modify_GPS_Agent_for_Running_Multiple_UR_Agent_Nodes_202"></a>Modify GPS Agent for Running Multiple UR Agent Nodes</h2>
+<p>You need to modify the <code>JOINT_PUBLISHER</code>, <code>JOINT_SUBSCRIBER</code>, <code>JOINT_ORDER</code>, <code>LINK_NAMES</code>, and ros node name.</p>
+<p>The following sample <code>hyperparams.py</code> and <code>agent_ur.py</code> are just for your reference.</p>
+<p>Make sure that <strong><code>ROS_NODE_SUFFIX</code> are different</strong> for each experiment if you are running serveral <code>gps_main.py</code> with UR agents</p>
+<h3><a id="Example_of_hyperparamspy_210"></a>Example of <code>hyperparams.py</code></h3>
+<pre><code class="language-python"><span class="hljs-comment"># To get started, copy over hyperparams from another experiment.</span>
+<span class="hljs-comment"># Visit rll.berkeley.edu/gps/hyperparams.html for documentation.</span>
+<span class="hljs-string">""" Hyperparameters for UR trajectory optimization experiment. """</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> division
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> os.path
+<span class="hljs-keyword">import</span> rospy
+<span class="hljs-keyword">import</span> rospkg
+<span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+<span class="hljs-keyword">from</span> tf <span class="hljs-keyword">import</span> TransformListener 
+
+<span class="hljs-keyword">from</span> gps <span class="hljs-keyword">import</span> __file__ <span class="hljs-keyword">as</span> gps_filepath
+<span class="hljs-keyword">from</span> gps.agent.ur_ros.agent_ur <span class="hljs-keyword">import</span> AgentURROS
+<span class="hljs-keyword">from</span> gps.algorithm.algorithm_mdgps <span class="hljs-keyword">import</span> AlgorithmMDGPS
+<span class="hljs-keyword">from</span> gps.algorithm.cost.cost_fk <span class="hljs-keyword">import</span> CostFK
+<span class="hljs-keyword">from</span> gps.algorithm.cost.cost_sum <span class="hljs-keyword">import</span> CostSum
+<span class="hljs-keyword">from</span> gps.algorithm.cost.cost_utils <span class="hljs-keyword">import</span> RAMP_LINEAR, RAMP_FINAL_ONLY
+<span class="hljs-keyword">from</span> gps.algorithm.dynamics.dynamics_lr_prior <span class="hljs-keyword">import</span> DynamicsLRPrior
+<span class="hljs-keyword">from</span> gps.algorithm.dynamics.dynamics_prior_gmm <span class="hljs-keyword">import</span> DynamicsPriorGMM
+<span class="hljs-keyword">from</span> gps.algorithm.policy_opt.policy_opt_caffe <span class="hljs-keyword">import</span> PolicyOptCaffe
+<span class="hljs-keyword">from</span> gps.algorithm.policy_opt.policy_opt_tf <span class="hljs-keyword">import</span> PolicyOptTf
+<span class="hljs-keyword">from</span> gps.algorithm.traj_opt.traj_opt_lqr_python <span class="hljs-keyword">import</span> TrajOptLQRPython
+<span class="hljs-keyword">from</span> gps.algorithm.policy.lin_gauss_init <span class="hljs-keyword">import</span> init_lqr
+<span class="hljs-keyword">from</span> gps.algorithm.policy.policy_prior_gmm <span class="hljs-keyword">import</span> PolicyPriorGMM
+<span class="hljs-keyword">from</span> gps.gui.target_setup_gui <span class="hljs-keyword">import</span> load_pose_from_npz
+<span class="hljs-keyword">from</span> gps.proto.gps_pb2 <span class="hljs-keyword">import</span> JOINT_ANGLES, JOINT_VELOCITIES, \
+        END_EFFECTOR_POINTS, END_EFFECTOR_POINT_VELOCITIES, ACTION, \
+        TRIAL_ARM, JOINT_SPACE
+<span class="hljs-keyword">from</span> gps.utility.general_utils <span class="hljs-keyword">import</span> get_ee_points, get_position
+<span class="hljs-keyword">from</span> gps.algorithm.policy_opt.tf_model_example <span class="hljs-keyword">import</span> example_tf_network
+<span class="hljs-keyword">from</span> gps.gui.config <span class="hljs-keyword">import</span> generate_experiment_info
+
+<span class="hljs-comment"># Topics for the robot publisher and subscriber.</span>
+JOINT_PUBLISHER = <span class="hljs-string">'/arm_controller/command'</span>
+JOINT_SUBSCRIBER = <span class="hljs-string">'/arm_controller/state'</span>
+
+<span class="hljs-comment"># 'SLOWNESS' is how far in the future (in seconds) position control extrapolates</span>
+<span class="hljs-comment"># when it publishs actions for robot movement.  1.0-10.0 is fine for simulation.</span>
+SLOWNESS = <span class="hljs-number">1.0</span>
+<span class="hljs-comment"># 'RESET_SLOWNESS' is how long (in seconds) we tell the robot to take when</span>
+<span class="hljs-comment"># returning to its start configuration.</span>
+RESET_SLOWNESS = <span class="hljs-number">2.0</span>
+
+<span class="hljs-comment"># Set constants for joints</span>
+SHOULDER_PAN_JOINT = <span class="hljs-string">'shoulder_pan_joint'</span>
+SHOULDER_LIFT_JOINT = <span class="hljs-string">'shoulder_lift_joint'</span>
+ELBOW_JOINT = <span class="hljs-string">'elbow_joint'</span>
+WRIST_1_JOINT = <span class="hljs-string">'wrist_1_joint'</span>
+WRIST_2_JOINT = <span class="hljs-string">'wrist_2_joint'</span>
+WRIST_3_JOINT = <span class="hljs-string">'wrist_3_joint'</span>
+
+<span class="hljs-comment"># Set constants for links</span>
+BASE = <span class="hljs-string">'base'</span>
+BASE_LINK = <span class="hljs-string">'base_link'</span>
+SHOULDER_LINK = <span class="hljs-string">'shoulder_link'</span>
+UPPER_ARM_LINK = <span class="hljs-string">'upper_arm_link'</span>
+FOREARM_LINK = <span class="hljs-string">'forearm_link'</span>
+WRIST_1_LINK = <span class="hljs-string">'wrist_1_link'</span>
+WRIST_2_LINK = <span class="hljs-string">'wrist_2_link'</span>
+WRIST_3_LINK = <span class="hljs-string">'wrist_3_link'</span>
+EE_LINK = <span class="hljs-string">'ee_link'</span>
+<span class="hljs-comment"># Set end effector constants</span>
+INITIAL_JOINTS = [<span class="hljs-number">0</span>, -np.pi / <span class="hljs-number">2</span>, np.pi / <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
+
+<span class="hljs-comment"># Set the number of goal points. 1 by default for a single end effector tip.</span>
+NUM_EE_POINTS = <span class="hljs-number">1</span>
+EE_POINTS = np.array([[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]])
+
+<span class="hljs-comment"># Specify a goal state in cartesian coordinates.</span>
+EE_POS_TGT = np.asmatrix([<span class="hljs-number">.70</span>, <span class="hljs-number">.70</span>, <span class="hljs-number">.50</span>])
+<span class="hljs-string">"""UR 10 Examples:
+EE_POS_TGT = np.asmatrix([.29, .52, .62]) # Target where all joints are 0.
+EE_POS_TGT = np.asmatrix([.65, .80, .30]) # Target in positive octant near ground.
+EE_POS_TGT = np.asmatrix([.70, .70, .50]) # Target in positive octant used for debugging convergence.
+The Gazebo sim converges to the above point with non-action costs:
+(-589.75, -594.71, -599.54, -601.54, -602.75, -603.28, -604.28, -604.79, -605.55, -606.29)
+Distance from Goal: (0.014, 0.005, -0.017)
+"""</span>
+
+<span class="hljs-comment"># Set to identity unless you want the goal to have a certain orientation.</span>
+EE_ROT_TGT = np.asmatrix([[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]])
+
+<span class="hljs-comment"># Only edit these when editing the robot joints and links.</span>
+<span class="hljs-comment"># The lengths of these arrays define numerous parameters in GPS.</span>
+JOINT_ORDER = [SHOULDER_PAN_JOINT, SHOULDER_LIFT_JOINT, ELBOW_JOINT,
+               WRIST_1_JOINT, WRIST_2_JOINT, WRIST_3_JOINT]
+LINK_NAMES = [BASE, BASE_LINK, SHOULDER_LINK, UPPER_ARM_LINK, FOREARM_LINK,
+              WRIST_1_LINK, WRIST_2_LINK, WRIST_3_LINK, EE_LINK]
+
+UR_PREFIX = <span class="hljs-string">'ur0'</span>
+<span class="hljs-keyword">if</span> UR_PREFIX:
+    <span class="hljs-keyword">for</span> i, item <span class="hljs-keyword">in</span> enumerate(JOINT_ORDER):
+        JOINT_ORDER[i] = UR_PREFIX +<span class="hljs-string">'_'</span> + item
+
+    <span class="hljs-keyword">for</span> i, item <span class="hljs-keyword">in</span> enumerate(LINK_NAMES):
+        LINK_NAMES[i] = UR_PREFIX +<span class="hljs-string">'_'</span> + item
+
+    insert_idx = JOINT_PUBLISHER.index(<span class="hljs-string">'arm_controller'</span>)+len(<span class="hljs-string">'arm_controller'</span>)
+    JOINT_PUBLISHER = JOINT_PUBLISHER[:insert_idx] + <span class="hljs-string">'_'</span> + UR_PREFIX + JOINT_PUBLISHER[insert_idx:]
+    insert_idx = JOINT_SUBSCRIBER.index(<span class="hljs-string">'arm_controller'</span>)+len(<span class="hljs-string">'arm_controller'</span>)
+    JOINT_SUBSCRIBER = JOINT_SUBSCRIBER[:insert_idx] + <span class="hljs-string">'_'</span> + UR_PREFIX + JOINT_SUBSCRIBER[insert_idx:]
+
+<span class="hljs-comment"># Hyperparamters to be tuned for optimizing policy learning on the specific robot.</span>
+UR_GAINS = np.array([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>])
+
+<span class="hljs-comment"># Packaging sensor dimensional data for reference.</span>
+SENSOR_DIMS = {
+    JOINT_ANGLES: len(JOINT_ORDER),
+    JOINT_VELOCITIES: len(JOINT_ORDER),
+    END_EFFECTOR_POINTS: NUM_EE_POINTS * EE_POINTS.shape[<span class="hljs-number">1</span>],
+    END_EFFECTOR_POINT_VELOCITIES: NUM_EE_POINTS * EE_POINTS.shape[<span class="hljs-number">1</span>],
+    ACTION: len(UR_GAINS),
+}
+
+<span class="hljs-comment"># States to check in agent._process_observations.</span>
+STATE_TYPES = {<span class="hljs-string">'positions'</span>: JOINT_ANGLES,
+               <span class="hljs-string">'velocities'</span>: JOINT_VELOCITIES}
+
+
+<span class="hljs-comment"># Path to urdf of robot.</span>
+rospack = rospkg.RosPack()
+TREE_PATH = rospack.get_path(<span class="hljs-string">'ur_description'</span>) + <span class="hljs-string">'/urdf/ur10_robot.urdf'</span>
+ROS_NODE_SUFFIX = UR_PREFIX
+<span class="hljs-comment"># Be sure to specify the correct experiment directory to save policy data at.</span>
+EXP_DIR = os.path.dirname(os.path.realpath(__file__)) + <span class="hljs-string">'/'</span>
+
+<span class="hljs-comment"># Set the number of seconds per step of a sample.</span>
+TIMESTEP = <span class="hljs-number">0.01</span>  <span class="hljs-comment"># Typically 0.01.</span>
+<span class="hljs-comment"># Set the number of timesteps per sample.</span>
+STEP_COUNT = <span class="hljs-number">100</span>  <span class="hljs-comment"># Typically 100.</span>
+<span class="hljs-comment"># Set the number of samples per condition.</span>
+SAMPLE_COUNT = <span class="hljs-number">5</span>  <span class="hljs-comment"># Typically 5.</span>
+<span class="hljs-comment"># set the number of conditions per iteration.</span>
+CONDITIONS = <span class="hljs-number">1</span>  <span class="hljs-comment"># Typically 2 for Caffe and 1 for LQR.</span>
+<span class="hljs-comment"># Set the number of trajectory iterations to collect.</span>
+ITERATIONS = <span class="hljs-number">20</span>  <span class="hljs-comment"># Typically 10.</span>
+
+x0s = []
+ee_tgts = []
+reset_conditions = []
+
+common = {
+    <span class="hljs-string">'experiment_name'</span>: <span class="hljs-string">'my_experiment'</span> + <span class="hljs-string">'_'</span> + \
+                       datetime.strftime(datetime.now(), <span class="hljs-string">'%m-%d-%y_%H-%M'</span>),
+    <span class="hljs-string">'experiment_dir'</span>: EXP_DIR,
+    <span class="hljs-string">'data_files_dir'</span>: EXP_DIR + <span class="hljs-string">'data_files/'</span>,
+    <span class="hljs-string">'target_filename'</span>: EXP_DIR + <span class="hljs-string">'target.npz'</span>,
+    <span class="hljs-string">'log_filename'</span>: EXP_DIR + <span class="hljs-string">'log.txt'</span>,
+    <span class="hljs-string">'conditions'</span>: CONDITIONS,
+}
+
+<span class="hljs-comment"># Set up each condition.</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> xrange(common[<span class="hljs-string">'conditions'</span>]):
+    <span class="hljs-comment"># Use hardcoded default vals init and target locations</span>
+    ja_x0 = np.zeros(SENSOR_DIMS[JOINT_ANGLES])
+    ee_pos_x0 = np.zeros((<span class="hljs-number">1</span>, <span class="hljs-number">3</span>))
+    ee_rot_x0 = np.zeros((<span class="hljs-number">3</span>, <span class="hljs-number">3</span>))
+
+    ee_pos_tgt = EE_POS_TGT
+    ee_rot_tgt = EE_ROT_TGT
+
+    state_space = sum(SENSOR_DIMS.values()) - SENSOR_DIMS[ACTION]
+
+    joint_dim = SENSOR_DIMS[JOINT_ANGLES] + SENSOR_DIMS[JOINT_VELOCITIES]
+
+    <span class="hljs-comment"># Initialized to start position and inital velocities are 0</span>
+    x0 = np.zeros(state_space)
+    x0[:SENSOR_DIMS[JOINT_ANGLES]] = ja_x0
+
+    <span class="hljs-comment"># Need for this node will go away upon migration to KDL</span>
+    rospy.init_node(<span class="hljs-string">'gps_agent_ur_ros_node'</span> + <span class="hljs-string">'_'</span> + ROS_NODE_SUFFIX)
+
+    <span class="hljs-comment"># Set starting end effector position using TF</span>
+    tf = TransformListener()
+
+    <span class="hljs-comment"># Sleep for .1 secs to give the node a chance to kick off</span>
+    rospy.sleep(<span class="hljs-number">1</span>)
+    time = tf.getLatestCommonTime(LINK_NAMES[-<span class="hljs-number">1</span>], LINK_NAMES[<span class="hljs-number">0</span>])
+
+    x0[joint_dim:(joint_dim + NUM_EE_POINTS * EE_POINTS.shape[<span class="hljs-number">1</span>])] = get_position(tf, LINK_NAMES[-<span class="hljs-number">1</span>], LINK_NAMES[<span class="hljs-number">0</span>], time)
+
+    <span class="hljs-comment"># Initialize target end effector position</span>
+    ee_tgt = np.ndarray.flatten(
+        get_ee_points(EE_POINTS, ee_pos_tgt, ee_rot_tgt).T
+    )
+
+    reset_condition = {
+        JOINT_ANGLES: INITIAL_JOINTS,
+        JOINT_VELOCITIES: []
+    }
+
+    x0s.append(x0)
+    ee_tgts.append(ee_tgt)
+    reset_conditions.append(reset_condition)
+x0s = np.array(x0s)
+ee_tgts = np.array(ee_tgts)
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(common[<span class="hljs-string">'data_files_dir'</span>]):
+    os.makedirs(common[<span class="hljs-string">'data_files_dir'</span>])
+
+
+agent = {
+    <span class="hljs-string">'type'</span>: AgentURROS,
+    <span class="hljs-string">'dt'</span>: TIMESTEP,
+    <span class="hljs-string">'dU'</span>: SENSOR_DIMS[ACTION],
+    <span class="hljs-string">'conditions'</span>: common[<span class="hljs-string">'conditions'</span>],
+    <span class="hljs-string">'T'</span>: STEP_COUNT,
+    <span class="hljs-string">'x0'</span>: x0s,
+    <span class="hljs-string">'ee_points_tgt'</span>: ee_tgts,
+    <span class="hljs-string">'reset_conditions'</span>: reset_conditions,
+    <span class="hljs-string">'sensor_dims'</span>: SENSOR_DIMS,
+    <span class="hljs-string">'joint_order'</span>: JOINT_ORDER,
+    <span class="hljs-string">'link_names'</span>: LINK_NAMES,
+    <span class="hljs-string">'state_types'</span>: STATE_TYPES,
+    <span class="hljs-string">'tree_path'</span>: TREE_PATH,
+    <span class="hljs-string">'joint_publisher'</span>: JOINT_PUBLISHER,
+    <span class="hljs-string">'joint_subscriber'</span>: JOINT_SUBSCRIBER,
+    <span class="hljs-string">'slowness'</span>: SLOWNESS,
+    <span class="hljs-string">'reset_slowness'</span>: RESET_SLOWNESS,
+    <span class="hljs-string">'state_include'</span>: [JOINT_ANGLES, JOINT_VELOCITIES,
+                      END_EFFECTOR_POINTS, END_EFFECTOR_POINT_VELOCITIES],
+    <span class="hljs-string">'end_effector_points'</span>: [EE_POINTS],
+    <span class="hljs-string">'obs_include'</span>: [JOINT_ANGLES, JOINT_VELOCITIES, END_EFFECTOR_POINTS, END_EFFECTOR_POINT_VELOCITIES],
+    <span class="hljs-string">'node_suffix'</span>: ROS_NODE_SUFFIX
+}
+
+algorithm = {
+    <span class="hljs-string">'type'</span>: AlgorithmMDGPS,
+    <span class="hljs-string">'conditions'</span>: common[<span class="hljs-string">'conditions'</span>],
+    <span class="hljs-string">'iterations'</span>: ITERATIONS,
+    <span class="hljs-string">'lg_step_schedule'</span>: np.array([<span class="hljs-number">1e-4</span>, <span class="hljs-number">1e-3</span>, <span class="hljs-number">1e-2</span>, <span class="hljs-number">1e-1</span>]),
+    <span class="hljs-string">'policy_dual_rate'</span>: <span class="hljs-number">0.1</span>,
+    <span class="hljs-string">'ent_reg_schedule'</span>: np.array([<span class="hljs-number">1e-3</span>, <span class="hljs-number">1e-3</span>, <span class="hljs-number">1e-2</span>, <span class="hljs-number">1e-1</span>]),
+    <span class="hljs-string">'fixed_lg_step'</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">'kl_step'</span>: <span class="hljs-number">5.0</span>,
+    <span class="hljs-string">'init_pol_wt'</span>: <span class="hljs-number">0.01</span>,
+    <span class="hljs-string">'min_step_mult'</span>: <span class="hljs-number">0.01</span>,
+    <span class="hljs-string">'max_step_mult'</span>: <span class="hljs-number">1.0</span>,
+    <span class="hljs-string">'sample_decrease_var'</span>: <span class="hljs-number">0.05</span>,
+    <span class="hljs-string">'sample_increase_var'</span>: <span class="hljs-number">0.1</span>,
+    <span class="hljs-string">'exp_step_increase'</span>: <span class="hljs-number">2.0</span>,
+    <span class="hljs-string">'exp_step_decrease'</span>: <span class="hljs-number">0.5</span>,
+    <span class="hljs-string">'exp_step_upper'</span>: <span class="hljs-number">0.5</span>,
+    <span class="hljs-string">'exp_step_lower'</span>: <span class="hljs-number">1.0</span>,
+    <span class="hljs-string">'max_policy_samples'</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-string">'policy_sample_mode'</span>: <span class="hljs-string">'add'</span>,
+}
+
+algorithm[<span class="hljs-string">'init_traj_distr'</span>] = {
+    <span class="hljs-string">'type'</span>: init_lqr,
+    <span class="hljs-string">'init_gains'</span>: <span class="hljs-number">1.0</span> / UR_GAINS,
+    <span class="hljs-string">'init_acc'</span>: np.zeros(SENSOR_DIMS[ACTION]),
+    <span class="hljs-string">'init_var'</span>: <span class="hljs-number">1.0</span>,
+    <span class="hljs-string">'stiffness'</span>: <span class="hljs-number">0.5</span>,
+    <span class="hljs-string">'stiffness_vel'</span>: <span class="hljs-number">.25</span>, 
+    <span class="hljs-string">'final_weight'</span>: <span class="hljs-number">50</span>, 
+    <span class="hljs-string">'dt'</span>: agent[<span class="hljs-string">'dt'</span>],
+    <span class="hljs-string">'T'</span>: agent[<span class="hljs-string">'T'</span>],
+}
+
+<span class="hljs-comment"># This cost function takes into account the distance between the end effector's</span>
+<span class="hljs-comment"># current and target positions, weighted in a linearly increasing fassion</span>
+<span class="hljs-comment"># as the number of trials grows from 0 to T-1. </span>
+fk_cost_ramp = {
+    <span class="hljs-string">'type'</span>: CostFK,
+    <span class="hljs-comment"># Target end effector is subtracted out of EE_POINTS in pr2 c++ plugin so goal</span>
+    <span class="hljs-comment"># is 0. The UR agent also subtracts this out for consistency.</span>
+    <span class="hljs-string">'target_end_effector'</span>: [np.zeros(NUM_EE_POINTS * EE_POINTS.shape[<span class="hljs-number">1</span>])],
+    <span class="hljs-string">'wp'</span>: np.ones(SENSOR_DIMS[END_EFFECTOR_POINTS]),
+    <span class="hljs-string">'l1'</span>: <span class="hljs-number">0.1</span>,
+    <span class="hljs-string">'l2'</span>: <span class="hljs-number">0.0001</span>,
+    <span class="hljs-string">'ramp_option'</span>: RAMP_LINEAR,
+}
+
+<span class="hljs-comment"># This cost function takes into account the distance between the end effector's</span>
+<span class="hljs-comment"># current and target positions at time T-1 only.</span>
+fk_cost_final = {
+    <span class="hljs-string">'type'</span>: CostFK,
+    <span class="hljs-string">'target_end_effector'</span>: np.zeros(NUM_EE_POINTS * EE_POINTS.shape[<span class="hljs-number">1</span>]),
+    <span class="hljs-string">'wp'</span>: np.ones(SENSOR_DIMS[END_EFFECTOR_POINTS]),
+    <span class="hljs-string">'l1'</span>: <span class="hljs-number">1.0</span>,
+    <span class="hljs-string">'l2'</span>: <span class="hljs-number">0.0</span>,
+    <span class="hljs-string">'wp_final_multiplier'</span>: <span class="hljs-number">100.0</span>,  <span class="hljs-comment"># Weight multiplier on final timestep.</span>
+    <span class="hljs-string">'ramp_option'</span>: RAMP_FINAL_ONLY,
+}
+
+<span class="hljs-comment"># Combines the cost functions in 'costs' to produce a single cost function</span>
+algorithm[<span class="hljs-string">'cost'</span>] = {
+    <span class="hljs-string">'type'</span>: CostSum,
+    <span class="hljs-string">'costs'</span>: [fk_cost_ramp, fk_cost_final],
+    <span class="hljs-string">'weights'</span>: [<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>],
+}
+
+algorithm[<span class="hljs-string">'dynamics'</span>] = {
+    <span class="hljs-string">'type'</span>: DynamicsLRPrior,
+    <span class="hljs-string">'regularization'</span>: <span class="hljs-number">1e-6</span>,
+    <span class="hljs-string">'prior'</span>: {
+        <span class="hljs-string">'type'</span>: DynamicsPriorGMM,
+        <span class="hljs-string">'max_clusters'</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-string">'min_samples_per_cluster'</span>: <span class="hljs-number">40</span>,
+        <span class="hljs-string">'max_samples'</span>: <span class="hljs-number">20</span>,
+    },
+}
+
+algorithm[<span class="hljs-string">'traj_opt'</span>] = {
+    <span class="hljs-string">'type'</span>: TrajOptLQRPython,
+}
+
+algorithm[<span class="hljs-string">'policy_opt'</span>] = {
+    <span class="hljs-string">'type'</span>: PolicyOptTf,
+    <span class="hljs-string">'weights_file_prefix'</span>: EXP_DIR + <span class="hljs-string">'policy'</span>,
+    <span class="hljs-string">'iterations'</span>: <span class="hljs-number">6000</span>,
+    <span class="hljs-comment"># 'network_arch_params': {</span>
+    <span class="hljs-comment">#     'n_layers': 3,</span>
+    <span class="hljs-comment">#     'dim_hidden': [40],</span>
+    <span class="hljs-comment"># },</span>
+    <span class="hljs-string">'network_params'</span>: {
+        <span class="hljs-string">'obs_include'</span>: agent[<span class="hljs-string">'obs_include'</span>],
+        <span class="hljs-string">'sensor_dims'</span>: SENSOR_DIMS,
+        <span class="hljs-string">'dim_hidden'</span>: [<span class="hljs-number">128</span>, <span class="hljs-number">64</span>],
+    },
+    <span class="hljs-string">'network_model'</span>: example_tf_network,
+}
+
+
+algorithm[<span class="hljs-string">'policy_prior'</span>] = {
+    <span class="hljs-string">'type'</span>: PolicyPriorGMM,
+    <span class="hljs-string">'max_clusters'</span>: <span class="hljs-number">20</span>,
+    <span class="hljs-string">'min_samples_per_cluster'</span>: <span class="hljs-number">40</span>,
+    <span class="hljs-string">'max_samples'</span>: <span class="hljs-number">40</span>,
+}
+
+config = {
+    <span class="hljs-string">'iterations'</span>: algorithm[<span class="hljs-string">'iterations'</span>],
+    <span class="hljs-string">'common'</span>: common,
+    <span class="hljs-string">'verbose_trials'</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">'verbose_policy_trials'</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">'agent'</span>: agent,
+    <span class="hljs-string">'gui_on'</span>: <span class="hljs-keyword">True</span>,
+    <span class="hljs-string">'algorithm'</span>: algorithm,
+    <span class="hljs-string">'num_samples'</span>: SAMPLE_COUNT,
+}
+
+common[<span class="hljs-string">'info'</span>] = generate_experiment_info(config)
+</code></pre>
+<h3><a id="Example_of_agent_urpy_557"></a>Example of <code>agent_ur.py</code></h3>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> copy <span class="hljs-comment"># Only used to copy the agent config data.</span>
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np <span class="hljs-comment"># Used pretty much everywhere.</span>
+<span class="hljs-keyword">import</span> threading <span class="hljs-comment"># Used for time locks to synchronize position data.</span>
+<span class="hljs-keyword">import</span> rospy <span class="hljs-comment"># Needed for nodes, rate, sleep, publish, and subscribe.</span>
+
+<span class="hljs-keyword">from</span> gps.agent.agent <span class="hljs-keyword">import</span> Agent <span class="hljs-comment"># GPS class needed to inherit from.</span>
+<span class="hljs-keyword">from</span> gps.agent.agent_utils <span class="hljs-keyword">import</span> setup, generate_noise <span class="hljs-comment"># setup used to get hyperparams in init and generate_noise to get noise in sample.</span>
+<span class="hljs-keyword">from</span> gps.agent.config <span class="hljs-keyword">import</span> AGENT_UR_ROS <span class="hljs-comment"># Parameters needed for config in __init__.</span>
+<span class="hljs-keyword">from</span> gps.sample.sample <span class="hljs-keyword">import</span> Sample <span class="hljs-comment"># Used to build a Sample object for each sample taken.</span>
+<span class="hljs-keyword">from</span> gps.utility.general_utils <span class="hljs-keyword">import</span> get_position <span class="hljs-comment"># For getting points and velocities.</span>
+
+<span class="hljs-keyword">from</span> tf <span class="hljs-keyword">import</span> TransformListener <span class="hljs-comment"># Needed for listening to and transforming robot state information.</span>
+<span class="hljs-keyword">from</span> trajectory_msgs.msg <span class="hljs-keyword">import</span> JointTrajectory, JointTrajectoryPoint <span class="hljs-comment"># Used for publishing UR joint angles.</span>
+<span class="hljs-keyword">from</span> control_msgs.msg <span class="hljs-keyword">import</span> JointTrajectoryControllerState <span class="hljs-comment"># Used for subscribing to the UR.</span>
+<span class="hljs-keyword">from</span> gps.proto.gps_pb2 <span class="hljs-keyword">import</span> JOINT_ANGLES, JOINT_VELOCITIES, ACTION, END_EFFECTOR_POINTS, END_EFFECTOR_POINT_JACOBIANS, END_EFFECTOR_POINT_VELOCITIES
+<span class="hljs-keyword">from</span> tree_urdf <span class="hljs-keyword">import</span> treeFromFile <span class="hljs-comment"># For KDL Jacobians</span>
+<span class="hljs-keyword">from</span> PyKDL <span class="hljs-keyword">import</span> Jacobian, Chain, ChainJntToJacSolver, JntArray <span class="hljs-comment"># For KDL Jacobians</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MSG_INVALID_JOINT_NAMES_DIFFER</span><span class="hljs-params">(Exception)</span>:</span>
+    <span class="hljs-string">"""Error object exclusively raised by _process_observations."""</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ROBOT_MADE_CONTACT_WITH_GAZEBO_GROUND_SO_RESTART_ROSLAUNCH</span><span class="hljs-params">(Exception)</span>:</span>
+    <span class="hljs-string">"""Error object exclusively raised by reset."""</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AgentURROS</span><span class="hljs-params">(Agent)</span>:</span>
+    <span class="hljs-string">"""Connects the UR actions and GPS algorithms."""</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, hyperparams, init_node=True)</span>:</span>
+        <span class="hljs-string">"""Initialized Agent.
+        hyperparams: Dictionary of hyperparameters.
+        init_node:   Whether or not to initialize a new ROS node."""</span>
+
+
+        <span class="hljs-comment"># Pull parameters from hyperparams file.</span>
+        config = copy.deepcopy(AGENT_UR_ROS)
+        config.update(hyperparams)
+        Agent.__init__(self, config)
+        conditions = self._hyperparams[<span class="hljs-string">'conditions'</span>]
+
+        <span class="hljs-comment"># Setup the main node.</span>
+        <span class="hljs-keyword">if</span> init_node:
+            rospy.init_node(<span class="hljs-string">'gps_agent_ur_ros_node'</span> + <span class="hljs-string">'_'</span> + self._hyperparams[<span class="hljs-string">'node_suffix'</span>])
+
+        <span class="hljs-comment"># for field in ('x0', 'ee_points_tgt', 'reset_conditions'):</span>
+        <span class="hljs-comment">#     self._hyperparams[field] = setup(self._hyperparams[field],</span>
+        <span class="hljs-comment">#                                      conditions)</span>
+        self._hyperparams[<span class="hljs-string">'reset_conditions'</span>] = setup(self._hyperparams[<span class="hljs-string">'reset_conditions'</span>], conditions)
+        <span class="hljs-comment"># x0 is not used by the agent, but it needs to be set on the agent</span>
+        <span class="hljs-comment"># object because the GPS algorithm implementation gets the value it</span>
+        <span class="hljs-comment"># uses for x0 from the agent object.  (This should probably be changed.)</span>
+        self.x0 = self._hyperparams[<span class="hljs-string">'x0'</span>]
+
+        <span class="hljs-comment"># Used by subscriber to get the present time and by main thread to</span>
+        <span class="hljs-comment"># get buffered positions.</span>
+        self.tf = TransformListener()
+
+        <span class="hljs-comment"># Times when EE positions were most recently recorded.  Set by the</span>
+        <span class="hljs-comment"># subscriber thread when it collects the EE positions from ROS and</span>
+        <span class="hljs-comment"># stores them for later use on the main thread.</span>
+        self._ee_time = <span class="hljs-keyword">None</span>
+        self._previous_ee_time = <span class="hljs-keyword">None</span>
+        self._ref_time = <span class="hljs-keyword">None</span>
+
+        <span class="hljs-comment"># Lock used to make sure the subscriber does not update the EE times</span>
+        <span class="hljs-comment"># while they are being used by the main thread.</span>
+        <span class="hljs-comment"># The subscriber thread acquires this lock with blocking=False to</span>
+        <span class="hljs-comment"># skip an update of the protected data if the lock is held elsewhere</span>
+        <span class="hljs-comment"># (ie, the main thread).  The main thread acquires this lock with</span>
+        <span class="hljs-comment"># blocking=True to block until the lock has been acquired.</span>
+        self._time_lock = threading.Lock()
+
+        <span class="hljs-comment"># Flag denoting if observations read in from ROS messages are fresh</span>
+        <span class="hljs-comment"># or have already been used in processing.  Used to make sure that the</span>
+        <span class="hljs-comment"># observations have been updated by the subscriber before the main</span>
+        <span class="hljs-comment"># thread will try to use them.</span>
+        self._observations_stale = <span class="hljs-keyword">True</span>
+
+        <span class="hljs-comment"># Message sent via the joint_subscriber topic indicating the</span>
+        <span class="hljs-comment"># newly observed state of the UR.</span>
+        self._observation_msg = <span class="hljs-keyword">None</span>
+
+        <span class="hljs-comment"># set dimensions of action</span>
+        self.dU = self._hyperparams[<span class="hljs-string">'dU'</span>]
+
+        self._valid_joint_set = set(hyperparams[<span class="hljs-string">'joint_order'</span>])
+        self._valid_joint_index = {joint:index <span class="hljs-keyword">for</span> joint, index <span class="hljs-keyword">in</span>
+                                   enumerate(hyperparams[<span class="hljs-string">'joint_order'</span>])}
+
+        <span class="hljs-comment"># Initialize the publisher and subscriber.  The subscriber begins</span>
+        <span class="hljs-comment"># checking the time every 40 msec by default.</span>
+        self._pub = rospy.Publisher(self._hyperparams[<span class="hljs-string">'joint_publisher'</span>], 
+                                     JointTrajectory, queue_size=<span class="hljs-number">5</span>)
+        self._sub = rospy.Subscriber(self._hyperparams[<span class="hljs-string">'joint_subscriber'</span>],
+                                     JointTrajectoryControllerState,
+                                     self._observation_callback)
+
+        <span class="hljs-comment"># Used for enforcing the period specified in hyperparameters.</span>
+        self.period = self._hyperparams[<span class="hljs-string">'dt'</span>]
+        self.r = rospy.Rate(<span class="hljs-number">1.</span> / self.period)
+        self.r.sleep()
+
+        self._currently_resetting = <span class="hljs-keyword">False</span>
+        self._reset_cv = threading.Condition(self._time_lock)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_observation_callback</span><span class="hljs-params">(self, message)</span>:</span>
+        <span class="hljs-string">"""This callback is set on the subscriber node in self.__init__().
+        It's called by ROS every 40 ms while the subscriber is listening.
+        Primarily updates the present and latest times.
+        This callback is invoked asynchronously, so is effectively a
+        "subscriber thread", separate from the control flow of the rest of
+        GPS, which runs in the "main thread".
+        message: observation from the robot to store each listen."""</span>
+
+        <span class="hljs-keyword">with</span> self._time_lock:
+            <span class="hljs-comment"># Gets the most recent time according to the TF node when a TF message</span>
+            <span class="hljs-comment"># transforming between base and end effector frames is published.</span>
+            new_time = self.tf.getLatestCommonTime(self._hyperparams[<span class="hljs-string">'link_names'</span>][-<span class="hljs-number">1</span>],
+                self._hyperparams[<span class="hljs-string">'link_names'</span>][<span class="hljs-number">0</span>])
+
+            <span class="hljs-comment"># Skip updating when _observation_callback() is called multiple times.</span>
+            <span class="hljs-comment"># between TF updates.</span>
+            <span class="hljs-keyword">if</span> new_time == self._ee_time:
+                <span class="hljs-keyword">return</span>
+
+            <span class="hljs-comment"># Set the reference time if it has not yet been set.</span>
+            <span class="hljs-keyword">if</span> self._ref_time <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+                self._ref_time = new_time
+                <span class="hljs-keyword">return</span>
+
+            <span class="hljs-comment"># Set previous_ee_time if not set or same as present time.</span>
+            <span class="hljs-keyword">if</span> self._previous_ee_time <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">or</span> self._previous_ee_time == self._ee_time:
+                self._previous_ee_time = self._ee_time
+                self._ee_time = new_time
+                <span class="hljs-keyword">return</span>
+
+            <span class="hljs-comment"># Compute the amount of time that has passed between the last</span>
+            <span class="hljs-comment"># "present" time and now.</span>
+            delta_t = new_time - self._ref_time
+            delta_ref_t = float(delta_t.secs) + float(delta_t.nsecs) * <span class="hljs-number">1e-9</span>
+            delta_t = new_time - self._ee_time
+
+            <span class="hljs-comment"># Fields such as self._observation_msg keep track of all</span>
+            <span class="hljs-comment"># valid messages received over the wire regardless of whether</span>
+            <span class="hljs-comment"># "enough time has passed".  This is useful in cases such as</span>
+            <span class="hljs-comment"># when you would like to examine the immediately prior value</span>
+            <span class="hljs-comment"># to approximate velocity.  If these values change faster than</span>
+            <span class="hljs-comment"># those such as self._ref_time, there will be no ill effect</span>
+            <span class="hljs-comment"># as self._observations_stale will indicate when the latter</span>
+            <span class="hljs-comment"># are ready to be used.</span>
+            self.delta_t = float(delta_t.secs) + float(delta_t.nsecs) * <span class="hljs-number">10.</span>**-<span class="hljs-number">9</span>
+            self._observation_msg = message
+            self._previous_ee_time = self._ee_time
+            self._ee_time = new_time
+
+            <span class="hljs-keyword">if</span> self._currently_resetting:
+                epsilon = <span class="hljs-number">1e-3</span>
+                reset_action = np.asarray(
+                    self._hyperparams[<span class="hljs-string">'reset_conditions'</span>][<span class="hljs-number">0</span>][JOINT_ANGLES])
+                now_action = np.asarray(
+                    self._observation_msg.actual.positions[:len(reset_action)])
+                du = np.linalg.norm(reset_action-now_action, float(<span class="hljs-string">'inf'</span>))
+                <span class="hljs-keyword">if</span> du &lt; epsilon:
+                    self._currently_resetting = <span class="hljs-keyword">False</span>
+                    self._reset_cv.notify_all()
+
+            <span class="hljs-comment"># Check if not enough time has passed.</span>
+            <span class="hljs-keyword">if</span> delta_ref_t &lt; self.period:
+                <span class="hljs-keyword">return</span>
+
+            <span class="hljs-comment"># Set observations stale and release lock.</span>
+            self._ref_time = new_time
+            self._observations_stale = <span class="hljs-keyword">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sample</span><span class="hljs-params">(self, policy, condition, verbose=True, save=True, noisy=True)</span>:</span>
+        <span class="hljs-string">"""This is the main method run when the Agent object is called by GPS.
+        Draws a sample from the environment, using the specified policy and
+        under the specified condition.
+        If "save" is True, then append the sample object of type Sample to
+        self._samples[condition].
+        TensorFlow is not yet implemented (FIXME)."""</span>
+
+        <span class="hljs-comment"># Reset the arm to initial configuration at start of each new trial.</span>
+        self.reset(condition)
+
+        <span class="hljs-comment"># Generate noise to be used in the policy object to compute next state.</span>
+        <span class="hljs-keyword">if</span> noisy:
+            noise = generate_noise(self.T, self.dU, self._hyperparams)
+        <span class="hljs-keyword">else</span>:
+            noise = np.zeros((self.T, self.dU))
+
+        <span class="hljs-comment"># Execute the trial.</span>
+        sample_data = self._run_trial(policy, noise,
+                          time_to_run=self._hyperparams[<span class="hljs-string">'trial_timeout'</span>])
+
+        <span class="hljs-comment"># Write trial data into sample object.</span>
+        sample = Sample(self)
+        <span class="hljs-keyword">for</span> sensor_id, data <span class="hljs-keyword">in</span> sample_data.iteritems():
+            sample.set(sensor_id, np.asarray(data))
+
+        <span class="hljs-comment"># Save the sample to the data structure. This is controlled by gps_main.py.</span>
+        <span class="hljs-keyword">if</span> save:
+            self._samples[condition].append(sample)
+
+        <span class="hljs-keyword">return</span> sample
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reset</span><span class="hljs-params">(self, condition)</span>:</span>
+        <span class="hljs-string">"""Not necessarily a helper function as it is inherited.
+        Reset the agent for a particular experiment condition.
+        condition: An index into hyperparams['reset_conditions']."""</span>
+
+        <span class="hljs-comment"># Set the reset position as the initial position from agent hyperparams.</span>
+        action = self._hyperparams[<span class="hljs-string">'reset_conditions'</span>][condition][JOINT_ANGLES]
+
+        <span class="hljs-comment"># Prepare the present positions to see how far off we are.</span>
+        now_position = np.asarray(self._observation_msg.actual.positions[:len(action)])
+
+        <span class="hljs-comment"># Raise error if robot has made contact with the ground in simulation.</span>
+        <span class="hljs-comment"># This occurs because Gazebo sets joint angles beyond what they can possibly</span>
+        <span class="hljs-comment"># be when the robot makes contact with the ground and "breaks." </span>
+        <span class="hljs-keyword">if</span> max(abs(now_position)) &gt;= <span class="hljs-number">2</span>*np.pi:
+            <span class="hljs-keyword">raise</span> ROBOT_MADE_CONTACT_WITH_GAZEBO_GROUND_SO_RESTART_ROSLAUNCH
+
+        <span class="hljs-comment"># Wait until the arm is within epsilon of reset configuration.</span>
+        <span class="hljs-keyword">with</span> self._time_lock:
+            self._currently_resetting = <span class="hljs-keyword">True</span>
+            self._pub.publish(self._get_ur_trajectory_message(action,
+                              self._hyperparams[<span class="hljs-string">'reset_slowness'</span>]))
+            self._reset_cv.wait()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_run_trial</span><span class="hljs-params">(self, policy, noise, time_to_run=<span class="hljs-number">5</span>)</span>:</span>
+        <span class="hljs-string">"""'Private' method only called by sample() to collect sample data.
+        Runs an async controller with a policy.
+        The async controller receives observations from ROS subscribers and
+        then uses them to publish actions.
+        policy:      policy object used to get next state
+        noise:       noise necessary in order to carry out the policy
+        time_to_run: is not used in this agent
+
+        Returns:
+            result: a dictionary keyed with each of the constants that
+            appear in the state_include, obs_include, and meta_include
+            sections of the hyperparameters file.  Each of these should
+            be associated with an array indexed by the timestep at which
+            a certain state/observation/meta param occurred and the
+            value representing a particular state/observation/meta
+            param.  Through this indexing scheme the value of each
+            state/observation/meta param at each timestep is stored."""</span>
+
+        <span class="hljs-comment"># Initialize the data structure to be passed to GPS.</span>
+        result = {param: [] <span class="hljs-keyword">for</span> param <span class="hljs-keyword">in</span> self.x_data_types +
+                         self.obs_data_types + self.meta_data_types +
+                         [END_EFFECTOR_POINT_JACOBIANS, ACTION]}
+
+        <span class="hljs-comment"># Carry out the number of trials specified in the hyperparams.  The</span>
+        <span class="hljs-comment"># index is only called by the policy.act method.  We use a while</span>
+        <span class="hljs-comment"># instead of for because we do not want to iterate if we do not publish.</span>
+        time_step = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">while</span> time_step &lt; self._hyperparams[<span class="hljs-string">'T'</span>]:
+
+            <span class="hljs-comment"># Skip the action if the subscriber thread has not finished</span>
+            <span class="hljs-comment"># initializing the times.</span>
+            <span class="hljs-keyword">if</span> self._previous_ee_time <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+                <span class="hljs-keyword">continue</span>
+
+            <span class="hljs-comment"># Only read and process ROS messages if they are fresh.</span>
+            <span class="hljs-keyword">if</span> self._observations_stale <span class="hljs-keyword">is</span> <span class="hljs-keyword">False</span>:
+
+                <span class="hljs-comment"># Acquire the lock to prevent the subscriber thread from</span>
+                <span class="hljs-comment"># updating times or observation messages.</span>
+                self._time_lock.acquire(<span class="hljs-keyword">True</span>)
+
+                prev_ros_time = self._previous_ee_time
+                ros_time = self._ee_time
+                self._previous_ee_time = ros_time
+                obs_message = self._observation_msg
+
+                <span class="hljs-comment"># Make it so that subscriber's thread observation callback</span>
+                <span class="hljs-comment"># must be called before publishing again.  <span class="hljs-doctag">FIXME:</span> This field</span>
+                <span class="hljs-comment"># should be protected by the time lock.</span>
+                self._observations_stale = <span class="hljs-keyword">True</span>
+
+                <span class="hljs-comment"># Release the lock after all dynamic variables have been updated.</span>
+                self._time_lock.release()
+
+                <span class="hljs-comment"># Collect the end effector points and velocities in</span>
+                <span class="hljs-comment"># cartesian coordinates for the state.</span>
+                ee_points, ee_velocities = \
+                    self._get_points_and_vels(ros_time, prev_ros_time, 
+                        self._hyperparams[<span class="hljs-string">'link_names'</span>][-<span class="hljs-number">1</span>],
+                        self._hyperparams[<span class="hljs-string">'link_names'</span>][<span class="hljs-number">0</span>], debug=<span class="hljs-keyword">False</span>)
+
+                <span class="hljs-comment"># Collect the present joint angles and velocities from ROS for the state.</span>
+                last_observations = self._process_observations(obs_message, result)
+
+                <span class="hljs-comment"># Get Jacobians from present joint angles and KDL trees</span>
+                <span class="hljs-comment"># The Jacobians consist of a 6x6 matrix getting its from from</span>
+                <span class="hljs-comment"># (# joint angles) x (len[x, y, z] + len[roll, pitch, yaw])</span>
+                ee_jacobians = self._get_jacobians(last_observations[:<span class="hljs-number">6</span>])
+
+                <span class="hljs-comment"># Concatenate the information that defines the robot state</span>
+                <span class="hljs-comment"># vector, typically denoted as 'x' in GPS articles.</span>
+                state = np.r_[np.reshape(last_observations, -<span class="hljs-number">1</span>),
+                              np.reshape(ee_points, -<span class="hljs-number">1</span>),
+                              np.reshape(ee_velocities, -<span class="hljs-number">1</span>)]
+
+                <span class="hljs-comment"># Pass the state vector through the policy to get a vector of</span>
+                <span class="hljs-comment"># joint angles to go to next.</span>
+                action = policy.act(state, state, time_step, noise[time_step])
+
+                <span class="hljs-comment"># Primary print statements of the action development.</span>
+                <span class="hljs-keyword">print</span> <span class="hljs-string">'\nTimestep'</span>, time_step
+                <span class="hljs-keyword">print</span> <span class="hljs-string">'Joint States '</span>, np.around(state[:<span class="hljs-number">6</span>], <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">print</span> <span class="hljs-string">'Policy Action'</span>, np.around(action, <span class="hljs-number">2</span>)
+
+                <span class="hljs-comment"># Display meters off from goal.</span>
+                <span class="hljs-keyword">print</span> <span class="hljs-string">'Distance from Goal'</span>, np.around(ee_points, <span class="hljs-number">3</span>)
+
+                <span class="hljs-comment"># Stop the robot from moving past last position when sample is done.</span>
+                <span class="hljs-comment"># If this is not called, the robot will complete its last action even</span>
+                <span class="hljs-comment"># though it is no longer supposed to be exploring.</span>
+                <span class="hljs-keyword">if</span> time_step == self._hyperparams[<span class="hljs-string">'T'</span>]-<span class="hljs-number">1</span>:
+                    action[:<span class="hljs-number">6</span>] = last_observations[:<span class="hljs-number">6</span>]
+
+                <span class="hljs-comment"># Publish the action to the robot.</span>
+                self._pub.publish(self._get_ur_trajectory_message(action, 
+                    self._hyperparams[<span class="hljs-string">'slowness'</span>]))
+
+                <span class="hljs-comment"># Only update the time_step after publishing.</span>
+                time_step += <span class="hljs-number">1</span>
+
+                <span class="hljs-comment"># Build up the result data structure to return to GPS.</span>
+                result[ACTION].append(action)
+                result[END_EFFECTOR_POINTS].append(ee_points)
+                result[END_EFFECTOR_POINT_JACOBIANS].append(ee_jacobians)
+                result[END_EFFECTOR_POINT_VELOCITIES].append(ee_velocities)
+
+            <span class="hljs-comment"># The subscriber is listening during this sleep() call, and</span>
+            <span class="hljs-comment"># updating the time "continuously" (each hyperparams['period'].</span>
+            self.r.sleep()
+
+        <span class="hljs-comment"># Sanity check the results to make sure nothing is infinite.</span>
+        <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> result.values():
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> np.isfinite(value).all():
+                <span class="hljs-keyword">print</span> <span class="hljs-string">'There is an infinite value in the results.'</span>
+            <span class="hljs-keyword">assert</span> np.isfinite(value).all()
+        <span class="hljs-keyword">return</span> result
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_get_jacobians</span><span class="hljs-params">(self,state)</span>:</span>
+        <span class="hljs-string">"""Produce a Jacobian from the urdf that maps from joint angles to x, y, z.
+        This makes a 6x6 matrix from 6 joint angles to x, y, z and 3 angles.
+        The angles are roll, pitch, and yaw (not Euler angles) and are not needed.
+        Returns a repackaged Jacobian that is 3x6.
+        """</span>
+
+        <span class="hljs-comment"># Initialize a Jacobian for 6 joint angles by 3 cartesian coords and 3 orientation angles</span>
+        jacobian = Jacobian(<span class="hljs-number">6</span>)
+
+        <span class="hljs-comment"># Initialize a joint array for the present 6 joint angles.</span>
+        angles = JntArray(<span class="hljs-number">6</span>)
+
+        <span class="hljs-comment"># Construct the joint array from the most recent joint angles.</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>):
+            angles[i] = state[i]
+
+        <span class="hljs-comment"># Initialize a tree structure from the robot urdf. </span>
+        <span class="hljs-comment"># Note that the xacro of the urdf is updated by hand.</span>
+        <span class="hljs-comment"># Then the urdf must be compiled.</span>
+        _, ur_tree = treeFromFile(self._hyperparams[<span class="hljs-string">'tree_path'</span>])
+
+        <span class="hljs-comment"># Retrieve a chain structure between the base and the start of the end effector.</span>
+        ur_chain = ur_tree.getChain(self._hyperparams[<span class="hljs-string">'link_names'</span>][<span class="hljs-number">0</span>],
+            self._hyperparams[<span class="hljs-string">'link_names'</span>][-<span class="hljs-number">1</span>])
+
+        <span class="hljs-comment"># Initialize a KDL Jacobian solver from the chain.</span>
+        jac_solver = ChainJntToJacSolver(ur_chain)
+
+        <span class="hljs-comment"># Update the jacobian by solving for the given angles.</span>
+        jac_solver.JntToJac(angles, jacobian)
+
+        <span class="hljs-comment"># Initialize a numpy array to store the Jacobian.</span>
+        J = np.zeros((<span class="hljs-number">6</span>,<span class="hljs-number">6</span>))
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(jacobian.rows()):
+            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(jacobian.columns()):
+                J[i,j] = jacobian[i,j]
+
+        <span class="hljs-comment"># Only want the cartesian position, not Roll, Pitch, Yaw (RPY) Angles</span>
+        ee_jacobians = J[<span class="hljs-number">0</span>:<span class="hljs-number">3</span>,:] 
+
+        <span class="hljs-keyword">return</span> ee_jacobians
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_get_points_and_vels</span><span class="hljs-params">(self, t, t_last, target, source, debug=False)</span>:</span>
+        <span class="hljs-string">"""
+        Helper function to _run_trial that gets the cartesian positions
+        and velocities from ROS.  Uses tf to convert from the Base to
+        End Effector and and get cartesian coordinates.  Draws positions
+        from a 'buffer' of past positions by checking recent times.
+        t: the 'present' time.  This is the time of the most recent observation,
+            so slightly earlier than the actual present.
+        t_last:          the 'present' time from last time this function was called
+        target:          the End Effector link
+        source:          the Base Link
+        debug:           activate extra print statements for debugging"""</span>
+
+        <span class="hljs-comment"># Assert that time has passed since the last step.</span>
+        <span class="hljs-keyword">assert</span> self.delta_t &gt; <span class="hljs-number">0.</span>
+
+        <span class="hljs-comment"># Listen to the cartesian coordinate of the target link.</span>
+        pos_last = get_position(self.tf, target, source, t_last)
+        pos_now = get_position(self.tf, target, source, t)
+
+        <span class="hljs-comment"># Use the past position to get the present velocity.</span>
+        velocity = (pos_now - pos_last)/self.delta_t
+
+        <span class="hljs-comment"># Shift the present position by the End Effector target.</span>
+        <span class="hljs-comment"># Since we subtract the target point from the current position, the optimal</span>
+        <span class="hljs-comment"># value for this will be 0.</span>
+        position = np.asarray(pos_now)-self._hyperparams[<span class="hljs-string">'ee_points_tgt'</span>][<span class="hljs-number">0</span>, :]
+
+        <span class="hljs-keyword">if</span> debug:
+            <span class="hljs-keyword">print</span> <span class="hljs-string">'VELOCITY:'</span>, velocity
+            <span class="hljs-keyword">print</span> <span class="hljs-string">'POSITION:'</span>, position
+            <span class="hljs-keyword">print</span> <span class="hljs-string">'BEFORE  :'</span>, t_last.to_sec(), pos_last
+            <span class="hljs-keyword">print</span> <span class="hljs-string">'PRESENT :'</span>, t.to_sec(), pos_now
+
+        <span class="hljs-keyword">return</span> position, velocity
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_process_observations</span><span class="hljs-params">(self, message, result)</span>:</span>
+        <span class="hljs-string">"""Helper fuinction only called by _run_trial to convert a ROS message
+        to joint angles and velocities.
+        Check for and handle the case where a message is either malformed
+        or contains joint values in an order different from that expected
+        in hyperparams['joint_order']"""</span>
+
+
+        <span class="hljs-comment"># Check if joint values are in the expected order and size.</span>
+        <span class="hljs-keyword">if</span> message.joint_names != self._hyperparams[<span class="hljs-string">'joint_order'</span>]:
+
+            <span class="hljs-comment"># Check that the message is of same size as the expected message.</span>
+            <span class="hljs-keyword">if</span> len(message.joint_names) != len(self._hyperparams[<span class="hljs-string">'joint_order'</span>]):
+                <span class="hljs-keyword">raise</span> MSG_INVALID_JOINT_NAMES_DIFFER
+
+            <span class="hljs-comment"># Check that all the expected joint values are present in a message.</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> all(map(<span class="hljs-keyword">lambda</span> x,y: x <span class="hljs-keyword">in</span> y, message.joint_names, 
+                [self._valid_joint_set <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(len(message.joint_names))])):
+
+                <span class="hljs-keyword">raise</span> MSG_INVALID_JOINT_NAMES_DIFFER
+
+            <span class="hljs-comment"># If necessary, reorder the joint values to conform to the order</span>
+            <span class="hljs-comment"># expected in hyperparams['joint_order'].</span>
+            new_message = [<span class="hljs-keyword">None</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(len(message))]
+            <span class="hljs-keyword">for</span> joint, index <span class="hljs-keyword">in</span> message.joint_names.enumerate():
+                <span class="hljs-keyword">for</span> state_type <span class="hljs-keyword">in</span> self._hyperparams[<span class="hljs-string">'state_types'</span>]:
+                    new_message[self._valid_joint_index[joint]] = message[state_type][index]
+
+            message = new_message
+
+        <span class="hljs-comment"># Package the positions, velocities, amd accellerations of the joint angles.</span>
+        <span class="hljs-keyword">for</span> (state_type, state_category), state_value_vector <span class="hljs-keyword">in</span> zip(
+            self._hyperparams[<span class="hljs-string">'state_types'</span>].iteritems(),
+            [message.actual.positions, message.actual.velocities,
+            message.actual.accelerations]):
+
+            <span class="hljs-comment"># Assert that the length of the value vector matches the corresponding</span>
+            <span class="hljs-comment"># number of dimensions from the hyperparameters file</span>
+            <span class="hljs-keyword">assert</span> len(state_value_vector) == self._hyperparams[<span class="hljs-string">'sensor_dims'</span>][state_category]
+
+            <span class="hljs-comment"># Write the state value vector into the results dictionary keyed by its</span>
+            <span class="hljs-comment"># state category</span>
+            result[state_category].append(state_value_vector)
+
+        <span class="hljs-keyword">return</span> np.array(result[JOINT_ANGLES][-<span class="hljs-number">1</span>] + result[JOINT_VELOCITIES][-<span class="hljs-number">1</span>])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_get_ur_trajectory_message</span><span class="hljs-params">(self, action, slowness)</span>:</span>
+        <span class="hljs-string">"""Helper function only called by reset() and run_trial().
+        Wraps an action vector of joint angles into a JointTrajectory message.
+        The velocities, accelerations, and effort do not control the arm motion"""</span>
+
+        <span class="hljs-comment"># Set up a trajectory message to publish.</span>
+        action_msg = JointTrajectory()
+        action_msg.joint_names = self._hyperparams[<span class="hljs-string">'joint_order'</span>]
+
+        <span class="hljs-comment"># Create a point to tell the robot to move to.</span>
+        target = JointTrajectoryPoint()
+        target.positions = action
+
+        <span class="hljs-comment"># These times determine the speed at which the robot moves:</span>
+        <span class="hljs-comment"># it tries to reach the specified target position in 'slowness' time.</span>
+        target.time_from_start = rospy.Duration(slowness)
+
+        <span class="hljs-comment"># Package the single point into a trajectory of points with length 1.</span>
+        action_msg.points = [target]
+
+        <span class="hljs-keyword">return</span> action_msg
+</code></pre>
+
+</body></html>
