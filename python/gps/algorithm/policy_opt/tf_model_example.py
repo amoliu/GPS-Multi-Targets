@@ -103,11 +103,12 @@ def example_tf_network(is_training = True, dim_input=27, dim_output=7, batch_siz
                             # weights_initializer=tf.truncated_normal_initializer(stddev=0.01),
                             weights_regularizer=slim.l2_regularizer(weight_decay),
                             activation_fn=act_fn):
-            mlp_applied = slim.stack(nn_input, slim.fully_connected, dim_hidden[:-1], scope='fc')
-            if dropout_keep_prob < 1.0:
-                mlp_applied = slim.dropout(mlp_applied, keep_prob=dropout_keep_prob, scope='dropout')
-            mlp_applied = slim.fully_connected(mlp_applied, num_outputs=dim_hidden[-1], activation_fn=None,
-                                               scope='fcn', normalizer_fn=None)
+            mlp_applied = slim.stack(nn_input, slim.fully_connected, dim_hidden, scope='fc')
+#             mlp_applied = slim.stack(nn_input, slim.fully_connected, dim_hidden[:-1], scope='fc')
+#             if dropout_keep_prob < 1.0:
+#                 mlp_applied = slim.dropout(mlp_applied, keep_prob=dropout_keep_prob, scope='dropout')
+#             mlp_applied = slim.fully_connected(mlp_applied, num_outputs=dim_hidden[-1], activation_fn=None,
+#                                                scope='fcn', normalizer_fn=None)
             mlp_applied = slim.fully_connected(mlp_applied, num_outputs=dim_output, activation_fn=None, scope='action_output')
         loss_out = get_loss_layer(mlp_out=mlp_applied, action=action, precision=precision, batch_size=batch_size)
         fc_vars = tf.trainable_variables()
