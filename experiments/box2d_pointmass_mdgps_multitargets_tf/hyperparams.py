@@ -83,7 +83,7 @@ plt.draw()
 iteration = 20
 
 
-EXP_DIR = os.path.dirname(os.path.realpath(__file__)) + '/no_BN_drop2/'
+EXP_DIR = os.path.dirname(os.path.realpath(__file__)) + '/'
 
 common = {
     'experiment_name': EXP_DIR.split('/')[-1] + '_' + \
