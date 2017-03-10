@@ -21,3 +21,5 @@ This version adds following features:
 * Add experiments which can train UR robot to go to [any target position](https://github.com/CTTC/GPS-Multi-Targets/tree/master/experiments/ur_tf_mdgps_multitargets)
 * Add experiments which can train UR robot to go to [any target poisition with specified orientation](https://github.com/CTTC/GPS-Multi-Targets/tree/master/experiments/ur_tf_mdgps_pose_multi_targets_multi_ori)
 * Add `AlgorithmSL` to support training agent with pure supervised learning without any optimal control, to demonstrate the necessity of optimal control
+
+To see the official code, please visit https://github.com/cbfinn/gps
